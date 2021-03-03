@@ -13,6 +13,7 @@ int		key_hook(int key, t_data *img)
 		mlx_destroy_window(img->mlx, img->win);
 		exit(0);
 	}
+	draw
 	return (0);
 }
 
@@ -53,7 +54,7 @@ static void draw_map(t_data *img, t_map *map, t_struct *params)
 	while (map->map[x])
 	{
 		y = 0;
-		while (map->map[x][y])
+		while (map->map[x][y]
 		{
 			if (map->map[x][y] == '1')
 				put_pixels(img, y * 10, x * 10, 0xffffff);

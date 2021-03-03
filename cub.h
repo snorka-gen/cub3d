@@ -51,9 +51,9 @@ typedef struct	s_data
 
 typedef struct s_all
 {
-	t_data		img;
-	t_map		map;
-	t_struct	params;
+	t_data		*img;
+	t_map		*map;
+	t_struct	*params;
 }				t_all;
 
 
