@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/aidasajdaseva/CLionProjects/cub/ft_check_error.c" "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/ft_check_error.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub/ft_check_file.c" "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/ft_check_file.c.o"
+  "/Users/aidasajdaseva/CLionProjects/cub/ft_create_window.c" "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/ft_create_window.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub/ft_endofline.c" "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/ft_endofline.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub/ft_fisrtlookmap.c" "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/ft_fisrtlookmap.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub/ft_get_ceiling.c" "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/ft_get_ceiling.c.o"

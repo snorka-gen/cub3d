@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cub.dir/ft_check_error.c.o"
   "CMakeFiles/cub.dir/ft_check_file.c.o"
+  "CMakeFiles/cub.dir/ft_create_window.c.o"
   "CMakeFiles/cub.dir/ft_endofline.c.o"
   "CMakeFiles/cub.dir/ft_fisrtlookmap.c.o"
   "CMakeFiles/cub.dir/ft_get_ceiling.c.o"

@@ -85,6 +85,9 @@
 		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_check_file.c">
 			<Option target="cub"/>
 		</Unit>
+		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_create_window.c">
+			<Option target="cub"/>
+		</Unit>
 		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_endofline.c">
 			<Option target="cub"/>
 		</Unit>

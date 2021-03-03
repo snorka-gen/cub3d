@@ -10,6 +10,7 @@
 #include "libft/libft.h"
 #include <stdlib.h>
 #include <fcntl.h>
+#include "minilibx_opengl_20191021/mlx.h"
 
 typedef struct s_struct
 {
@@ -23,6 +24,8 @@ typedef struct s_struct
 	char	*we;
 	char	*so;
 	char	*s;
+	int 	up;
+	int 	down;
 }				t_struct;
 
 typedef struct s_map
@@ -30,8 +33,29 @@ typedef struct s_map
 	int		len;
 	int 	count;
 	int		player;
+	int		playerx;
+	int		playery;
 	char	**map;
 }				t_map;
+
+typedef struct	s_data
+{
+	void	*img;
+	void	*mlx;
+	void	*win;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}				t_data;
+
+typedef struct s_all
+{
+	t_data		img;
+	t_map		map;
+	t_struct	params;
+}				t_all;
+
 
 t_struct		*ft_struct_init();
 void			ft_check_error(int i);
@@ -55,6 +79,6 @@ void			ft_maxlen(t_map *map, int len);
 void			ft_player_look(t_map *map, char *line);
 void			ft_secondlookmap(int fd, t_map *map);
 void			ft_validmap(t_map *map);
-
-
+void			ft_create_window(t_map *map, t_struct *params);
+int				key_hook(int key, t_data *img);
 #endif

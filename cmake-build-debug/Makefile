@@ -197,6 +197,33 @@ ft_check_file.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/ft_check_file.c.s
 .PHONY : ft_check_file.c.s
 
+ft_create_window.o: ft_create_window.c.o
+
+.PHONY : ft_create_window.o
+
+# target to build an object file
+ft_create_window.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/ft_create_window.c.o
+.PHONY : ft_create_window.c.o
+
+ft_create_window.i: ft_create_window.c.i
+
+.PHONY : ft_create_window.i
+
+# target to preprocess a source file
+ft_create_window.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/ft_create_window.c.i
+.PHONY : ft_create_window.c.i
+
+ft_create_window.s: ft_create_window.c.s
+
+.PHONY : ft_create_window.s
+
+# target to generate assembly for a file
+ft_create_window.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/ft_create_window.c.s
+.PHONY : ft_create_window.c.s
+
 ft_endofline.o: ft_endofline.c.o
 
 .PHONY : ft_endofline.o
@@ -806,6 +833,9 @@ help:
 	@echo "... ft_check_file.o"
 	@echo "... ft_check_file.i"
 	@echo "... ft_check_file.s"
+	@echo "... ft_create_window.o"
+	@echo "... ft_create_window.i"
+	@echo "... ft_create_window.s"
 	@echo "... ft_endofline.o"
 	@echo "... ft_endofline.i"
 	@echo "... ft_endofline.s"
