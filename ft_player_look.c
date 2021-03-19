@@ -3,6 +3,18 @@
 //
 #include "cub.h"
 
+static void pov(t_map *map, char c)
+{
+	if (c == 'N')
+		map->playera = 3.1415926535897;
+	if (c == 'S')
+		map->playera = 0;
+	if (c == 'E')
+		map->playera = 3.1415926535897 / 2;
+	if (c == 'W')
+		map->playera = (3 * 3.1415926535897) / 2;
+}
+
 void ft_player_look(t_map *map, char *line)
 {
 	int i;
@@ -16,8 +28,9 @@ void ft_player_look(t_map *map, char *line)
 		if (line[i] == 'N' || line[i] == 'S' || line[i] == 'W' || line[i] == 'E')
 		{
 			map->player++;
-			map->playerx = map->count * 10;
-			map->playery = i * 10;
+			pov(map, line[i]);
+			map->playerx = map->count * 10 + 5;
+			map->playery = i * 10 + 5;
 		}
 		i++;
 	}

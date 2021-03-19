@@ -29,7 +29,7 @@ static int ft_get_g(char *line, t_struct *params, int i)
 		i++;
 	while (line[i] == ' ' && line[i])
 		i++;
-	if (ft_strchr("123456789", line[i]))
+	if (ft_strchr("0123456789", line[i]))
 		while (ft_isdigit(line[i]))
 		{
 			params->floor[1] = params->floor[1] * 10 + (line[i] - 48);
@@ -50,7 +50,7 @@ static int ft_get_b(char *line, t_struct *params, int i)
 		i++;
 	while (line[i] == ' ' && line[i])
 		i++;
-	if (ft_strchr("123456789", line[i]))
+	if (ft_strchr("0123456789", line[i]))
 		while (ft_isdigit(line[i]))
 		{
 			params->floor[2] = params->floor[2] * 10 + (line[i] - 48);

@@ -21,6 +21,8 @@ int main(int argc, char **argv)
 	t_all		*all;
 
 	all = malloc(sizeof (t_all));
+	all->img = malloc(sizeof(t_data));
+	all->ray = malloc(sizeof (t_plr));
 	fd = open(argv[1], O_RDONLY);
 	all->params = ft_struct_init();
 	all->map = ft_map_init();

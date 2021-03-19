@@ -47,6 +47,8 @@ static void	ft_check_perimetr(t_map *map)
 
 static void ft_hateful_eight(char **line, int i, int j)
 {
+	if (line[i][j] != '0' && line[i][j] != '2')
+		line[i][j] = '0';
 	if (line[i - 1][j - 1] == ' ' || line[i - 1][j] == ' ' ||
 	line[i - 1][j + 1] == ' ' || line[i][j - 1] == ' ' ||
 	line[i][j + 1] == ' ' || line[i + 1][j - 1] == ' ' ||

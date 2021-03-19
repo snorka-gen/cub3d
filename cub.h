@@ -33,8 +33,9 @@ typedef struct s_map
 	int		len;
 	int 	count;
 	int		player;
-	int		playerx;
-	int		playery;
+	float	playera;
+	float		playerx;
+	float		playery;
 	char	**map;
 }				t_map;
 
@@ -49,11 +50,20 @@ typedef struct	s_data
 	int		endian;
 }				t_data;
 
+typedef struct	s_plr //структура для игрока и луча
+{
+	float		x;
+	float		y;
+	float		angle;
+	float		end;
+}				  t_plr;
+
 typedef struct s_all
 {
 	t_data		*img;
 	t_map		*map;
 	t_struct	*params;
+	t_plr		*ray;
 }				t_all;
 
 
