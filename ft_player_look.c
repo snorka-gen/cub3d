@@ -29,8 +29,8 @@ void ft_player_look(t_map *map, char *line)
 		{
 			map->player++;
 			pov(map, line[i]);
-			map->playerx = map->count * 64 + 32;
-			map->playery = i * 64 + 32;
+			map->playerx = map->count * 128 + 64;
+			map->playery = i * 128 + 64;
 		}
 		i++;
 	}
