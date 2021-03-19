@@ -37,7 +37,7 @@ void put_the_wall(t_all *all, float c, size_t x)
 {
 //	size_t column = all->params->y/(c/10 * cos(all->ray->angle - all->map->playera));
 	float distance = (all->params->x / 2) / tan(0.523599);
-	size_t column = (10 / (c * cos(all->ray->angle - all->map->playera))) * distance;
+	size_t column = (64 / (c * cos(all->ray->angle - all->map->playera))) * distance;
 	printf("c %f, corrected c %f\n", c, c * cos(all->ray->angle - all->map->playera));
 //	printf("%f %zu, c %f\n", distance, column, c);
 	int starty = all->params->y/2 - column/2;
@@ -81,7 +81,7 @@ static void draw_map(t_all *all) {
 		float c = 0;
 		all->ray->x = all->map->playerx;
 		all->ray->y = all->map->playery;
-		while (all->map->map[(int) (all->ray->x/10)][(int) (all->ray->y/10)] != '1') {
+		while (all->map->map[(int) (all->ray->x/64)][(int) (all->ray->y/64)] != '1') {
 			all->ray->x = all->map->playerx + c * cos(all->ray->angle);
 			all->ray->y = all->map->playery + c * sin(all->ray->angle);
 			c += 0.05;
@@ -98,9 +98,9 @@ static void press_s(t_all *all)
 	float x;
 	float y;
 
-	x = all->map->playerx - cos(all->map->playera)*2;
-	y = all->map->playery - sin(all->map->playera)*2;
-	if (all->map->map[(int)x/10][(int)y/10] != '1')
+	x = all->map->playerx - cos(all->map->playera)*10;
+	y = all->map->playery - sin(all->map->playera)*10;
+	if (all->map->map[(int)x/64][(int)y/64] != '1')
 	{
 		all->map->playerx = x;
 		all->map->playery = y;
@@ -112,9 +112,9 @@ static void press_w(t_all *all)
 	float x;
 	float y;
 
-	x = all->map->playerx + cos(all->map->playera);
-	y = all->map->playery + sin(all->map->playera);
-	if (all->map->map[(int)x/10][(int)y/10] != '1')
+	x = all->map->playerx + cos(all->map->playera)*10;
+	y = all->map->playery + sin(all->map->playera)*10;
+	if (all->map->map[(int)x/64][(int)y/64] != '1')
 	{
 		all->map->playerx = x;
 		all->map->playery = y;
