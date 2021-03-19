@@ -79,6 +79,6 @@ void			ft_maxlen(t_map *map, int len);
 void			ft_player_look(t_map *map, char *line);
 void			ft_secondlookmap(int fd, t_map *map);
 void			ft_validmap(t_map *map);
-void			ft_create_window(t_map *map, t_struct *params);
-int				key_hook(int key, t_data *img);
+void			ft_create_window(t_all *all);
+int				key_hook(int key, t_all *all);
 #endif

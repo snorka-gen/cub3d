@@ -19,7 +19,6 @@ void ft_get_params(int fd, t_struct *params)
 {
 	char *line;
 	int i;
-	int gnl;
 
 	params->flag = 0;
 	while (params->flag != 9)

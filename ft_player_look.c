@@ -16,8 +16,8 @@ void ft_player_look(t_map *map, char *line)
 		if (line[i] == 'N' || line[i] == 'S' || line[i] == 'W' || line[i] == 'E')
 		{
 			map->player++;
-			map->playerx = map->count;
-			map->playery = i;
+			map->playerx = map->count * 10;
+			map->playery = i * 10;
 		}
 		i++;
 	}
