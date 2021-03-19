@@ -35,16 +35,20 @@ static void put_pixels(t_data *img, int x, int y, int color)
 
 void put_the_wall(t_all *all, float c, size_t x)
 {
-	size_t column = all->params->y/(c/10 * cos(all->ray->angle - all->map->playera));
+//	size_t column = all->params->y/(c/10 * cos(all->ray->angle - all->map->playera));
+	float distance = (all->params->x / 2) / tan(0.523599);
+	size_t column = (10 / (c * cos(all->ray->angle - all->map->playera))) * distance;
+	printf("c %f, corrected c %f\n", c, c * cos(all->ray->angle - all->map->playera));
+//	printf("%f %zu, c %f\n", distance, column, c);
 	int starty = all->params->y/2 - column/2;
 	int i;
 	i = 0;
 	while (i < starty)
-		my_mlx_pixel_put(all->img, all->params->x/2 + x, i++, all->params->up);
+		my_mlx_pixel_put(all->img, x, i++, all->params->up);
 	while (i < starty + column)
-		my_mlx_pixel_put(all->img, all->params->x/2 + x, i++, 0xffffff);
+		my_mlx_pixel_put(all->img, x, i++, 0xffffff);
 	while (i < all->params->y)
-		my_mlx_pixel_put(all->img, all->params->x/2 + x, i++, all->params->down);
+		my_mlx_pixel_put(all->img, x, i++, all->params->down);
 }
 
 static void draw_map(t_all *all) {
@@ -53,27 +57,27 @@ static void draw_map(t_all *all) {
 
 	x = 0;
 	// Отрисовка карты с положением игрока
-	while (all->map->map[x]) {
-		y = 0;
-		while (all->map->map[x][y]) {
-			if (all->map->map[x][y] == '1')
-				put_pixels(all->img, y * 10, x * 10, 0xffffff);
-			if (all->map->map[x][y] == '2')
-				put_pixels(all->img, y * 10, x * 10, 0xff0000);
-			if (all->map->map[x][y] == 'E' || all->map->map[x][y] == 'N' || all->map->map[x][y] == 'W' ||
-				all->map->map[x][y] == 'S')
-				put_pixels(all->img, y * 10, x * 10, all->params->down);
-			if (all->map->map[x][y] == '0')
-				put_pixels(all->img, y * 10, x * 10, all->params->down);
-			put_pixels(all->img, all->map->playery - 5, all->map->playerx - 5, 0x0000ff);
-			y++;
-		}
-		x++;
-	}
+//	while (all->map->map[x]) {
+//		y = 0;
+//		while (all->map->map[x][y]) {
+//			if (all->map->map[x][y] == '1')
+//				put_pixels(all->img, y * 10, x * 10, 0xffffff);
+//			if (all->map->map[x][y] == '2')
+//				put_pixels(all->img, y * 10, x * 10, 0xff0000);
+//			if (all->map->map[x][y] == 'E' || all->map->map[x][y] == 'N' || all->map->map[x][y] == 'W' ||
+//				all->map->map[x][y] == 'S')
+//				put_pixels(all->img, y * 10, x * 10, all->params->down);
+//			if (all->map->map[x][y] == '0')
+//				put_pixels(all->img, y * 10, x * 10, all->params->down);
+//			put_pixels(all->img, all->map->playery - 5, all->map->playerx - 5, 0x0000ff);
+//			y++;
+//		}
+//		x++;
+//	}
 // Отрисовка луча "взгляда"
 	size_t i = 0;
-	while (i < all->params->x/2) {
-		all->ray->angle = all->map->playera + 0.523 - i * (1.047/all->params->x * 2);
+	while (i < all->params->x) {
+		all->ray->angle = all->map->playera + 0.523 - i * (1.047/all->params->x);
 		float c = 0;
 		all->ray->x = all->map->playerx;
 		all->ray->y = all->map->playery;
@@ -81,7 +85,7 @@ static void draw_map(t_all *all) {
 			all->ray->x = all->map->playerx + c * cos(all->ray->angle);
 			all->ray->y = all->map->playery + c * sin(all->ray->angle);
 			c += 0.05;
-			my_mlx_pixel_put(all->img, all->ray->y, all->ray->x, 0x990099);
+//			my_mlx_pixel_put(all->img, all->ray->y, all->ray->x, 0x990099);
 		}
 		put_the_wall(all, c, i);
 		i++;
