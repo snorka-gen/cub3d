@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aidasajdaseva/CLionProjects/cub
+CMAKE_SOURCE_DIR = /Users/fcassey/CLionProjects/cub3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fcassey/CLionProjects/cub3d/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles /Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -818,6 +818,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/main.c.s
 .PHONY : main.c.s
 
+minilibx_opengl_20191021/mlx_get_screen_size.o: minilibx_opengl_20191021/mlx_get_screen_size.c.o
+
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.o
+
+# target to build an object file
+minilibx_opengl_20191021/mlx_get_screen_size.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.c.o
+
+minilibx_opengl_20191021/mlx_get_screen_size.i: minilibx_opengl_20191021/mlx_get_screen_size.c.i
+
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.i
+
+# target to preprocess a source file
+minilibx_opengl_20191021/mlx_get_screen_size.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.i
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.c.i
+
+minilibx_opengl_20191021/mlx_get_screen_size.s: minilibx_opengl_20191021/mlx_get_screen_size.c.s
+
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.s
+
+# target to generate assembly for a file
+minilibx_opengl_20191021/mlx_get_screen_size.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.s
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -902,6 +929,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.o"
+	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.i"
+	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.s"
 .PHONY : help
 
 

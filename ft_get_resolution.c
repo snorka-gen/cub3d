@@ -4,7 +4,7 @@
 
 #include "cub.h"
 
-static int ft_get_x(char *line, t_struct *params, int i)
+static int ft_get_x(char *line, t_struct *params, int i, int width)
 {
 
 	while (line[i] == ' ' && line[i])
@@ -13,8 +13,8 @@ static int ft_get_x(char *line, t_struct *params, int i)
 		while (ft_isdigit(line[i]))
 		{
 			params->x = params->x * 10 + (line[i] - 48);
-			if (params->x > 2440)
-				params->x = 2440;
+			if (params->x > width)
+				params->x = width;
 			i++;
 		}
 	else
@@ -22,7 +22,7 @@ static int ft_get_x(char *line, t_struct *params, int i)
 	return (i);
 }
 
-static int ft_get_y(char *line, t_struct *params, int i)
+static int ft_get_y(char *line, t_struct *params, int i, int height)
 {
 	while (line[i] == ' ' && line[i])
 		i++;
@@ -30,8 +30,8 @@ static int ft_get_y(char *line, t_struct *params, int i)
 		while (ft_isdigit(line[i]))
 		{
 			params->y = params->y * 10 + (line[i] - 48);
-			if (params->y > 1440)
-				params->y = 1440;
+			if (params->y > height)
+				params->y = height;
 			i++;
 		}
 	else
@@ -41,10 +41,14 @@ static int ft_get_y(char *line, t_struct *params, int i)
 
 void ft_get_resolution(char *line, t_struct *params, int i)
 {
+	int width;
+	int height;
+
+	mlx_get_screen_size(&width, &height);
 	if (params->x != 0)
 		ft_check_error(1);
-	i = ft_get_x(line, params, i);
-	i = ft_get_y(line, params, i);
+	i = ft_get_x(line, params, i, width);
+	i = ft_get_y(line, params, i, height);
 	ft_endofline(line, i);
 	params->flag += 2;
 }

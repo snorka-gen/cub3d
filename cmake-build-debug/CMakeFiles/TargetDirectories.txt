@@ -1,3 +1,3 @@
-/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir
+/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/cub.dir

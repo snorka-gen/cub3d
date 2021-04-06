@@ -187,8 +187,10 @@ static void press_w(t_all *all)
 			all->map->playerx = x;
 			all->map->playery = y;
 		}
-		else
+		else {
 			i = 16;
+//			printf("!!WALL x:%d y:%d\n", (int)all->map->playerx/128, (int)all->map->playery/128);
+		}
 		draw_map(all);
 		i++;
 	}
@@ -208,6 +210,14 @@ int key_hook(int key, t_all *all) {
 		if (key == 2) {
 			all->map->playera -= 0.261799;
 			draw_map(all);
+		}
+		if (key == 6) {
+			float angle;
+			if (all->map->playera >= 0)
+				angle = fmod(all->map->playera ,(2*3.141593));
+			else
+				angle = fmod(all->map->playera ,(2*3.141593)) + (2*3.141593);
+			printf("%f\n", angle);
 		}
 		if (key == 53) {
 			mlx_destroy_window(all->img->mlx, all->img->win);

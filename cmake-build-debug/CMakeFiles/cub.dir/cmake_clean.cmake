@@ -24,6 +24,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/cub.dir/libft/ft_intstrchr.c.o"
   "CMakeFiles/cub.dir/libft/ft_spacealloc.c.o"
   "CMakeFiles/cub.dir/main.c.o"
+  "CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o"
   "cub"
   "cub.pdb"
 )
