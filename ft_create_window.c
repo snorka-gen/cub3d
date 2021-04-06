@@ -36,19 +36,67 @@ static void put_pixels(t_data *img, int x, int y, int color)
 void put_the_wall(t_all *all, float c, size_t x)
 {
 //	size_t column = all->params->y/(c/10 * cos(all->ray->angle - all->map->playera));
-	float distance = (all->params->x / 2) / tan(0.523599);
-	size_t column = (128 / (c * cos(all->ray->angle - all->map->playera))) * distance;
-	printf("c %f, corrected c %f\n", c, c * cos(all->ray->angle - all->map->playera));
+//	float distance = (all->params->x / 2) / tan(0.523599);
+	size_t column = (128 / (c * cos(all->ray->angle - all->map->playera))) * all->ray->distance;
+//	size_t column = 100;
+//	printf("column %zu\n", column);
+//	printf("c %f, corrected c %f\n", c, c * cos(all->ray->angle - all->map->playera));
 //	printf("%f %zu, c %f\n", distance, column, c);
 	int starty = all->params->y/2 - column/2;
 	int i;
 	i = 0;
 	while (i < starty)
 		my_mlx_pixel_put(all->img, x, i++, all->params->up);
-	while (i < starty + column)
+	while (i < starty + column && i < all->params->y)
 		my_mlx_pixel_put(all->img, x, i++, 0xffffff);
 	while (i < all->params->y)
 		my_mlx_pixel_put(all->img, x, i++, all->params->down);
+}
+
+float notopt(t_all *all)
+{
+	float c;
+	float cosinus = cos(all->ray->angle);
+	float sinus = sin(all->ray->angle);
+	c = 0;
+	while (all->map->map[(int) (all->ray->x/128)][(int) (all->ray->y/128)] != '1') {
+		all->ray->x = all->map->playerx + c * cosinus;
+		all->ray->y = all->map->playery + c * sinus;
+		c += 0.05;
+//			my_mlx_pixel_put(all->img, all->ray->y, all->ray->x, 0x990099);
+	}
+	return (c);
+
+}
+float opt(t_all *all)
+{
+	float c;
+	c = 0;
+	float cosinus = cos(all->ray->angle);
+	float sinus = sin(all->ray->angle);
+	while (all->map->map[(int) (all->ray->x/128)][(int) (all->ray->y/128)] != '1') {
+		all->ray->x = all->map->playerx + c * cosinus;
+		all->ray->y = all->map->playery + c * sinus;
+		c += 5;
+	}
+	if (c >= 10)
+		c -= 10;
+	all->ray->x -= (5 * cosinus);
+	all->ray->y -= (5 * sinus);
+	while (all->map->map[(int) (all->ray->x/128)][(int) (all->ray->y/128)] != '1') {
+		all->ray->x = all->map->playerx + c * cosinus;
+		all->ray->y = all->map->playery + c * sinus;
+		c += 1;
+	}
+	c -= 2;
+	all->ray->x -= cosinus;
+	all->ray->y -= sinus;
+	while (all->map->map[(int) (all->ray->x/128)][(int) (all->ray->y/128)] != '1') {
+		all->ray->x = all->map->playerx + c * cosinus;
+		all->ray->y = all->map->playery + c * sinus;
+		c += 0.05;
+	}
+	return (c);
 }
 
 static void draw_map(t_all *all) {
@@ -76,18 +124,13 @@ static void draw_map(t_all *all) {
 //	}
 // Отрисовка луча "взгляда"
 	size_t i = 0;
+	float c;
 	while (i < all->params->x) {
 		all->ray->angle = all->map->playera + 0.523 - i * (1.047/all->params->x);
-		float c = 0;
 		all->ray->x = all->map->playerx;
 		all->ray->y = all->map->playery;
-		while (all->map->map[(int) (all->ray->x/128)][(int) (all->ray->y/128)] != '1') {
-			all->ray->x = all->map->playerx + c * cos(all->ray->angle);
-			all->ray->y = all->map->playery + c * sin(all->ray->angle);
-			c += 0.05;
-//			my_mlx_pixel_put(all->img, all->ray->y, all->ray->x, 0x990099);
-		}
-		put_the_wall(all, c, i);
+		c = opt(all);
+		put_the_wall(all, opt(all), i);
 		i++;
 	}
 	mlx_put_image_to_window(all->img->mlx, all->img->win, all->img->img, 0, 0);
@@ -97,13 +140,22 @@ static void press_s(t_all *all)
 {
 	float x;
 	float y;
+	int i;
 
-	x = all->map->playerx - cos(all->map->playera)*20;
-	y = all->map->playery - sin(all->map->playera)*20;
-	if (all->map->map[(int)x/128][(int)y/128] != '1')
-	{
-		all->map->playerx = x;
-		all->map->playery = y;
+	i = 0;
+	while (i < 16) {
+		mlx_clear_window(all->img->mlx, all->img->win);
+		x = all->map->playerx - cos(all->map->playera);
+		y = all->map->playery - sin(all->map->playera);
+		if (all->map->map[(int) x / 128][(int) y / 128] != '1') {
+			all->map->playerx = x;
+			all->map->playery = y;
+		}
+		else
+			i = 16;
+
+		draw_map(all);
+		i++;
 	}
 }
 
@@ -111,43 +163,70 @@ static void press_w(t_all *all)
 {
 	float x;
 	float y;
+	int i;
 
-	x = all->map->playerx + cos(all->map->playera)*20;
-	y = all->map->playery + sin(all->map->playera)*20;
-	if (all->map->map[(int)x/128][(int)y/128] != '1')
-	{
-		all->map->playerx = x;
-		all->map->playery = y;
+	i = 0;
+//	while (i < 16) {
+//		mlx_clear_window(all->img->mlx, all->img->win);
+//		x = all->map->playerx + cos(all->map->playera) * 2;
+//		y = all->map->playery + sin(all->map->playera) * 2;
+//		if (all->map->map[(int) x / 128][(int) y / 128] != '1') {
+//			all->map->playerx = x;
+//			all->map->playery = y;
+//		}
+//		else
+//			i = 16;
+//		draw_map(all);
+//		i++;
+//	}
+	while (i < 16) {
+		mlx_clear_window(all->img->mlx, all->img->win);
+		x = all->map->playerx + cos(all->map->playera);
+		y = all->map->playery + sin(all->map->playera);
+		if (all->map->map[(int) x / 128][(int) y / 128] != '1') {
+			all->map->playerx = x;
+			all->map->playery = y;
+		}
+		else
+			i = 16;
+		draw_map(all);
+		i++;
 	}
 }
 
 
 int key_hook(int key, t_all *all) {
-		mlx_clear_window(all->img->mlx, all->img->win);
+//		mlx_clear_window(all->img->mlx, all->img->win);
 		if (key == 13)
 			press_w(all);
 		if (key == 1)
 			press_s(all);
-		if (key == 0)
-			all->map->playera += 0.174533;
-		if (key == 2)
-			all->map->playera -= 0.174533;
+		if (key == 0) {
+			all->map->playera += 0.261799;
+			draw_map(all);
+		}
+		if (key == 2) {
+			all->map->playera -= 0.261799;
+			draw_map(all);
+		}
 		if (key == 53) {
 			mlx_destroy_window(all->img->mlx, all->img->win);
 			exit(0);
 	}
-		draw_map(all);
+//		draw_map(all);
 		return (0);
 	}
 
 	void ft_create_window(t_all *all)
 	{
 		all->img->mlx = mlx_init();
-		all->img->win = mlx_new_window(all->img->mlx, all->params->x, all->params->y, "test");
+		all->img->win = mlx_new_window(all->img->mlx, all->params->x, all->params->y, "cub3D");
 		all->img->img = mlx_new_image(all->img->mlx, all->params->x, all->params->y);
 		all->img->addr = mlx_get_data_addr(all->img->img, &all->img->bits_per_pixel, &all->img->line_length,
 										   &all->img->endian);
+		all->ray->distance = (all->params->x / 2) / tan(0.523599);
 		draw_map(all);
 		mlx_hook(all->img->win, 2, (1L << 0), &key_hook, all);
+
 		mlx_loop(all->img->mlx);
 	}

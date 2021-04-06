@@ -56,6 +56,7 @@ typedef struct	s_plr //структура для игрока и луча
 	float		y;
 	float		angle;
 	float		end;
+	float distance;
 }				  t_plr;
 
 typedef struct s_all

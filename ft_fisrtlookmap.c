@@ -35,7 +35,6 @@ static void ft_first_line(int fd, t_map *map)
 void	ft_fisrtlookmap(int fd, t_map *map)
 {
 	char	*line;
-	int		i;
 
 	ft_first_line(fd, map);
 	while ((line = ft_gnl(fd, map)))

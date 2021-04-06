@@ -1,4 +1,4 @@
-NAME = test.out
+NAME = cub3D
 
 all:	${NAME}
 
@@ -9,7 +9,7 @@ ${NAME}:
 		cp ./get_next_line/get_next_line.a .
 		make -C ./minilibx_opengl_20191021/
 		cp ./minilibx_opengl_20191021/libmlx.a .
-		gcc *.c -o ${NAME} -L. -I. libft.a get_next_line.a libmlx.a -framework OpenGL -framework Appkit
+		gcc *.c -o ${NAME} -L. -I. libft.a get_next_line.a libmlx.a -framework OpenGL -framework Appkit -O2
 
 clean:
 		rm -f ./libft/*.o
