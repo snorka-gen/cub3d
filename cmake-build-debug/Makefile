@@ -818,32 +818,32 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/main.c.s
 .PHONY : main.c.s
 
-minilibx_opengl_20191021/mlx_get_screen_size.o: minilibx_opengl_20191021/mlx_get_screen_size.c.o
+minilibx_opengl_20191021/mlx_get_screen_size.o: minilibx_opengl_20191021/mlx_get_screen_size.m.o
 
 .PHONY : minilibx_opengl_20191021/mlx_get_screen_size.o
 
 # target to build an object file
-minilibx_opengl_20191021/mlx_get_screen_size.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o
-.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.c.o
+minilibx_opengl_20191021/mlx_get_screen_size.m.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.m.o
 
-minilibx_opengl_20191021/mlx_get_screen_size.i: minilibx_opengl_20191021/mlx_get_screen_size.c.i
+minilibx_opengl_20191021/mlx_get_screen_size.i: minilibx_opengl_20191021/mlx_get_screen_size.m.i
 
 .PHONY : minilibx_opengl_20191021/mlx_get_screen_size.i
 
 # target to preprocess a source file
-minilibx_opengl_20191021/mlx_get_screen_size.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.i
-.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.c.i
+minilibx_opengl_20191021/mlx_get_screen_size.m.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.m.i
 
-minilibx_opengl_20191021/mlx_get_screen_size.s: minilibx_opengl_20191021/mlx_get_screen_size.c.s
+minilibx_opengl_20191021/mlx_get_screen_size.s: minilibx_opengl_20191021/mlx_get_screen_size.m.s
 
 .PHONY : minilibx_opengl_20191021/mlx_get_screen_size.s
 
 # target to generate assembly for a file
-minilibx_opengl_20191021/mlx_get_screen_size.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.s
-.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.c.s
+minilibx_opengl_20191021/mlx_get_screen_size.m.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
+.PHONY : minilibx_opengl_20191021/mlx_get_screen_size.m.s
 
 # Help Target
 help:

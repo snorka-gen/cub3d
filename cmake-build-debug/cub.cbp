@@ -156,7 +156,7 @@
 		<Unit filename="/Users/fcassey/CLionProjects/cub3d/main.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.m">
 			<Option target="cub"/>
 		</Unit>
 		<Unit filename="/Users/fcassey/CLionProjects/cub3d/CMakeLists.txt">

@@ -402,18 +402,18 @@ CMakeFiles/cub.dir/ft_create_window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_create_window.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d/ft_create_window.c -o CMakeFiles/cub.dir/ft_create_window.c.s
 
-CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o: CMakeFiles/cub.dir/flags.make
-CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o: ../minilibx_opengl_20191021/mlx_get_screen_size.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o   -c /Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.c
+CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o: CMakeFiles/cub.dir/flags.make
+CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o: ../minilibx_opengl_20191021/mlx_get_screen_size.m
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o   -c /Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.m
 
-CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.c > CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.i
+CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.m > CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i
 
-CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.c -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.s
+CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.m -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
 
 # Object files for target cub
 cub_OBJECTS = \
@@ -442,7 +442,7 @@ cub_OBJECTS = \
 "CMakeFiles/cub.dir/ft_secondlookmap.c.o" \
 "CMakeFiles/cub.dir/ft_validmap.c.o" \
 "CMakeFiles/cub.dir/ft_create_window.c.o" \
-"CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o"
+"CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
 
 # External object files for target cub
 cub_EXTERNAL_OBJECTS =
@@ -472,7 +472,7 @@ cub: CMakeFiles/cub.dir/ft_player_look.c.o
 cub: CMakeFiles/cub.dir/ft_secondlookmap.c.o
 cub: CMakeFiles/cub.dir/ft_validmap.c.o
 cub: CMakeFiles/cub.dir/ft_create_window.c.o
-cub: CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o
+cub: CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o
 cub: CMakeFiles/cub.dir/build.make
 cub: CMakeFiles/cub.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C executable cub"

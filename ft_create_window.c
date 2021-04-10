@@ -135,6 +135,10 @@ static void draw_map(t_all *all) {
 	}
 	mlx_put_image_to_window(all->img->mlx, all->img->win, all->img->img, 0, 0);
 }
+//static void	steps_to_wall(t_all *all, int key)
+//{
+//
+//}
 
 static void press_s(t_all *all)
 {
@@ -143,7 +147,7 @@ static void press_s(t_all *all)
 	int i;
 
 	i = 0;
-	while (i < 16) {
+	while (i < 32) {
 		mlx_clear_window(all->img->mlx, all->img->win);
 		x = all->map->playerx - cos(all->map->playera);
 		y = all->map->playery - sin(all->map->playera);
@@ -152,7 +156,7 @@ static void press_s(t_all *all)
 			all->map->playery = y;
 		}
 		else
-			i = 16;
+			i = 32;
 
 		draw_map(all);
 		i++;
@@ -179,16 +183,16 @@ static void press_w(t_all *all)
 //		draw_map(all);
 //		i++;
 //	}
-	while (i < 16) {
+	while (i < 32) {
 		mlx_clear_window(all->img->mlx, all->img->win);
 		x = all->map->playerx + cos(all->map->playera);
 		y = all->map->playery + sin(all->map->playera);
-		if (all->map->map[(int) x / 128][(int) y / 128] != '1') {
+		if (all->map->map[(int) (x) / 128][(int) y / 128] != '1') {
 			all->map->playerx = x;
 			all->map->playery = y;
 		}
 		else {
-			i = 16;
+			i = 32;
 //			printf("!!WALL x:%d y:%d\n", (int)all->map->playerx/128, (int)all->map->playery/128);
 		}
 		draw_map(all);

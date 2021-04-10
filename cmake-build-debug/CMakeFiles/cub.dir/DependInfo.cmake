@@ -29,7 +29,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/fcassey/CLionProjects/cub3d/libft/ft_intstrchr.c" "/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/cub.dir/libft/ft_intstrchr.c.o"
   "/Users/fcassey/CLionProjects/cub3d/libft/ft_spacealloc.c" "/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/cub.dir/libft/ft_spacealloc.c.o"
   "/Users/fcassey/CLionProjects/cub3d/main.c" "/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/cub.dir/main.c.o"
-  "/Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.c" "/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.c.o"
+  "/Users/fcassey/CLionProjects/cub3d/minilibx_opengl_20191021/mlx_get_screen_size.m" "/Users/fcassey/CLionProjects/cub3d/cmake-build-debug/CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
