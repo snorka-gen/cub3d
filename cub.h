@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include "minilibx_opengl_20191021/mlx.h"
-
+#define SCALE 64
 typedef struct s_struct
 {
 	int		x;
@@ -37,6 +37,7 @@ typedef struct s_map
 	float		playerx;
 	float		playery;
 	char	**map;
+	int 	side;
 }				t_map;
 
 typedef struct	s_data
@@ -59,12 +60,20 @@ typedef struct	s_plr //структура для игрока и луча
 	float distance;
 }				  t_plr;
 
+typedef struct s_texture
+{
+	void *img;
+	int img_width;
+	int img_height;
+}				t_texture;
+
 typedef struct s_all
 {
 	t_data		*img;
 	t_map		*map;
 	t_struct	*params;
 	t_plr		*ray;
+	t_texture 	*texture;
 }				t_all;
 
 
