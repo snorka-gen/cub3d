@@ -61,7 +61,7 @@ float opt(t_all *all) {
 	c = 0;
 	float cosinus = cos(all->ray->angle);
 	float sinus = sin(all->ray->angle);
-	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
+	while (all->map->map[(int)floor(all->ray->x / SCALE)][(int)floor(all->ray->y / SCALE)] != '1') {
 		all->ray->x = all->map->playerx + c * cosinus;
 		all->ray->y = all->map->playery + c * sinus;
 		c += 5;
@@ -70,7 +70,7 @@ float opt(t_all *all) {
 		c -= 10;
 	all->ray->x -= (5 * cosinus);
 	all->ray->y -= (5 * sinus);
-	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
+	while (all->map->map[(int)floor(all->ray->x / SCALE)][(int)floor(all->ray->y / SCALE)] != '1') {
 		all->ray->x = all->map->playerx + c * cosinus;
 		all->ray->y = all->map->playery + c * sinus;
 		c += 1;
@@ -78,11 +78,14 @@ float opt(t_all *all) {
 	c -= 2;
 	all->ray->x -= cosinus;
 	all->ray->y -= sinus;
-	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
+	while (all->map->map[(int)floor(all->ray->x / SCALE)][(int)floor(all->ray->y / SCALE)] != '1') {
 		all->ray->x = all->map->playerx + c * cosinus;
 		all->ray->y = all->map->playery + c * sinus;
 		c += 0.05;
 	}
+	c -= 0.05;
+	all->ray->x = all->map->playerx + c * cosinus;
+	all->ray->y = all->map->playery + c * sinus;
 	int hitx = fmod(all->ray->x, SCALE);
 	if (hitx <= 0)
 		hitx = SCALE - hitx - 1;
