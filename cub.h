@@ -63,8 +63,16 @@ typedef struct	s_plr //структура для игрока и луча
 typedef struct s_texture
 {
 	void *img;
-	int img_width;
-	int img_height;
+	int width;
+	int height;
+	double wallX;
+	char        *addr;
+	int         bits_per_pixel;
+	int         line_length;
+	int         endian;
+	int		color;
+	int texX;
+
 }				t_texture;
 
 typedef struct s_all
