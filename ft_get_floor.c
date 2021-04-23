@@ -8,7 +8,7 @@ static int ft_get_r(char *line, t_struct *params, int i)
 {
 	while (line[i] == ' ' && line[i])
 		i++;
-	if (ft_strchr("123456789", line[i]))
+	if (ft_strchr("0123456789", line[i]))
 		while (ft_isdigit(line[i]))
 		{
 			params->floor[0] = params->floor[0] * 10 + (line[i] - 48);
