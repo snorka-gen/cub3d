@@ -2,7 +2,6 @@
 // Created by Аида Сайдашева on 02.03.2021.
 //
 #include "cub.h"
-#include <math.h>
 
 //
 
@@ -52,37 +51,36 @@ void put_the_wall(t_all *all, float c, size_t x)
 	while (i < all->params->y)
 		my_mlx_pixel_put(all->img, x, i++, all->params->down);
 }
-//static void xy(float *x, float *y)
-//{
-//	if
-//}
+
 float opt(t_all *all) {
 	float c;
 	c = 0;
 	float cosinus = cos(all->ray->angle);
 	float sinus = sin(all->ray->angle);
 	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
-		all->ray->x = all->map->playerx + c * cosinus;
-		all->ray->y = all->map->playery + c * sinus;
 		c += 5;
-	}
-	if (c >= 10)
-		c -= 10;
-	all->ray->x -= (5 * cosinus);
-	all->ray->y -= (5 * sinus);
-	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
 		all->ray->x = all->map->playerx + c * cosinus;
 		all->ray->y = all->map->playery + c * sinus;
+	}
+	if (c > 5)
+	c -= 5;
+	all->ray->x = all->map->playerx + c * cosinus;
+	all->ray->y = all->map->playery + c * sinus;
+	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
 		c += 1;
-	}
-	c -= 2;
-	all->ray->x -= cosinus;
-	all->ray->y -= sinus;
-	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
 		all->ray->x = all->map->playerx + c * cosinus;
 		all->ray->y = all->map->playery + c * sinus;
-		c += 0.05;
 	}
+	c -= 1;
+	all->ray->x = all->map->playerx + c * cosinus;
+	all->ray->y = all->map->playery + c * sinus;
+	while (all->map->map[(int) (all->ray->x / SCALE)][(int) (all->ray->y / SCALE)] != '1') {
+		c += 0.05;
+		all->ray->x = all->map->playerx + c * cosinus;
+		all->ray->y = all->map->playery + c * sinus;
+//		c += 0.0005;
+	}
+	c -= 0.05;
 	int hitx = fmod(all->ray->x, SCALE);
 	if (hitx <= 0)
 		hitx = SCALE - hitx - 1;
@@ -121,15 +119,20 @@ static void press_s(t_all *all)
 	float x;
 	float y;
 	int i;
+	float cosinus;
+	float sinus;
 
 	i = 0;
+	cosinus = cos(all->map->playera);
+	sinus = sin(all->map->playera);
 	while (i < SCALE/4) {
-		mlx_clear_window(all->img->mlx, all->img->win);
-		x = all->map->playerx - cos(all->map->playera);
-		y = all->map->playery - sin(all->map->playera);
-		if (all->map->map[(int) x / SCALE][(int) y / SCALE] != '1') {
-			all->map->playerx = x;
-			all->map->playery = y;
+//		mlx_clear_window(all->img->mlx, all->img->win);
+		x = all->map->playerx - cosinus * 8;
+		y = all->map->playery - sinus * 8;
+		if (all->map->map[(int) x / SCALE][(int) y / SCALE] &&
+				all->map->map[(int) x / SCALE][(int) y / SCALE] != '1') {
+			all->map->playerx -= cosinus;
+			all->map->playery -= sinus;
 		}
 		else
 			i = SCALE/4;
@@ -144,15 +147,19 @@ static void press_w(t_all *all)
 	float x;
 	float y;
 	int i;
+	float cosinus;
+	float sinus;
 
+	cosinus = cos(all->map->playera);
+	sinus = sin(all->map->playera);
 	i = 0;
 	while (i < SCALE/4) {
-		mlx_clear_window(all->img->mlx, all->img->win);
-		x = all->map->playerx + cos(all->map->playera);
-		y = all->map->playery + sin(all->map->playera);
+//		mlx_clear_window(all->img->mlx, all->img->win);
+		x = all->map->playerx + cosinus * 8;
+		y = all->map->playery + sinus * 8;
 		if (all->map->map[(int) (x) / SCALE][(int) y / SCALE] != '1') {
-			all->map->playerx = x;
-			all->map->playery = y;
+			all->map->playerx += cosinus;
+			all->map->playery += sinus;
 		}
 		else {
 			i = SCALE/4;

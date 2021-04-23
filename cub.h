@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include "minilibx_opengl_20191021/mlx.h"
+#include <math.h>
 #define SCALE 64
 typedef struct s_struct
 {
