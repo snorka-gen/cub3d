@@ -484,18 +484,18 @@ void get_tex_color(t_all *all, int x, int y)
 		{
 			if (dist->side == 0) {
 				dist->perpWallDist = (dist->mapX - all->map->playerx + (1 - dist->stepX) / 2) / dist->rayDirX;
-				all->tex->wallX = all->map->playery + dist->perpWallDist * all->map->dir_y;
+				all->tex->wallX = all->map->playery + dist->perpWallDist * dist->rayDirY;
 			}
 			else {
 				dist->perpWallDist = (dist->mapY - all->map->playery + (1 - dist->stepY) / 2) / dist->rayDirY;
-				all->tex->wallX = all->map->playerx + dist->perpWallDist * all->map->dir_x;
+				all->tex->wallX = all->map->playerx + dist->perpWallDist * dist->rayDirX;
 			}
 			all->tex->wallX -= floor(all->tex->wallX);
 			all->tex->texX = (int)(all->tex->wallX * (double)all->tex->width);
-//			if (dist->side == 0 && all->map->dir_x > 0)
-//				all->tex->texX = all->tex->width - all->tex->texX - 1;
-//			if (dist->side == 1 && all->map->dir_y < 0)
-//				all->tex->texX = all->tex->width - all->tex->texX - 1;
+			if (dist->side == 0 && dist->rayDirX > 0)
+				all->tex->texX = all->tex->width - all->tex->texX - 1;
+			if (dist->side == 1 && dist->rayDirY < 0)
+				all->tex->texX = all->tex->width - all->tex->texX - 1;
 		}
 
 		void dda_distance(t_all *all, t_dist *dist)
@@ -583,6 +583,7 @@ void get_tex_color(t_all *all, int x, int y)
 				get_distance_params2(all, &dist);
 				dda_distance(all, &dist);
 				put_the_wall(all, &dist, i);
+//				printf("wallX = %f, texX = %d, dir = %f\n", all->tex->wallX, all->tex->texX, all->map->dir_x);
 				i++;
 			}
 			mlx_put_image_to_window(all->img->mlx, all->img->win, all->img->img, 0, 0);
