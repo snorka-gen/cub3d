@@ -52,8 +52,9 @@ static void ft_hateful_eight(char **line, int i, int j)
 	if (line[i - 1][j - 1] == ' ' || line[i - 1][j] == ' ' ||
 	line[i - 1][j + 1] == ' ' || line[i][j - 1] == ' ' ||
 	line[i][j + 1] == ' ' || line[i + 1][j - 1] == ' ' ||
-	line[i + 1][j] == ' ' || line[i + 1][j + 1] == ' ')
+	line[i + 1][j] == ' ' || line[i + 1][j + 1] == ' ') {
 		ft_check_error(7);
+	}
 }
 
 void	ft_validmap(t_map *map)

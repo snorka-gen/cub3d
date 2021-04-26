@@ -6,13 +6,33 @@
 static void pov(t_map *map, char c)
 {
 	if (c == 'N')
-		map->playera = 3.1415926535897;
+	{
+		map->planeX = 0;
+		map->planeY = 0.66;
+		map->dir_x = -1;
+		map->dir_y = 0;
+	}
 	if (c == 'S')
-		map->playera = 0;
+	{
+		map->planeX = 0;
+		map->planeY = -0.66;
+		map->dir_x = 1;
+		map->dir_y = 0;
+	}
 	if (c == 'E')
-		map->playera = 3.1415926535897 / 2;
+	{
+		map->planeX = 0.66;
+		map->planeY = 0;
+		map->dir_x = 0;
+		map->dir_y = 1;
+	}
 	if (c == 'W')
-		map->playera = (3 * 3.1415926535897) / 2;
+	{
+		map->planeX = -0.66;
+		map->planeY = 0;
+		map->dir_x = 0;
+		map->dir_y = -1;
+	}
 }
 
 void ft_player_look(t_map *map, char *line)
@@ -29,8 +49,8 @@ void ft_player_look(t_map *map, char *line)
 		{
 			map->player++;
 			pov(map, line[i]);
-			map->playerx = map->count * SCALE + SCALE/2;
-			map->playery = i * SCALE + SCALE/2;
+			map->playerx = map->count;
+			map->playery = i;
 		}
 		i++;
 	}

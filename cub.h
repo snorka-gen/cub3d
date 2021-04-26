@@ -13,6 +13,8 @@
 #include "minilibx_opengl_20191021/mlx.h"
 #include <math.h>
 #define SCALE 64
+#define PI 3.1415926
+#define MOVESPEED 0.2
 typedef struct s_struct
 {
 	int		x;
@@ -34,12 +36,34 @@ typedef struct s_map
 	int		len;
 	int 	count;
 	int		player;
-	float	playera;
 	float		playerx;
 	float		playery;
+	float planeX;
+	float planeY;
+	float dir_x;
+	float dir_y;
 	char	**map;
 	int 	side;
+	float	rad;
+	float dist;
 }				t_map;
+
+typedef struct s_dist
+{
+	double	cameraX;
+	double	rayDirX;
+	double	rayDirY;
+	double	deltaDistX;
+	double	deltaDistY;
+	double	sideDistX;
+	double	sideDistY;
+	double	perpWallDist;
+	int		stepX;
+	int		stepY;
+	int 	side;
+	int 	mapX;
+	int 	mapY;
+}				t_dist;
 
 typedef struct	s_data
 {
@@ -52,13 +76,13 @@ typedef struct	s_data
 	int		endian;
 }				t_data;
 
+
 typedef struct	s_plr //структура для игрока и луча
 {
-	float		x;
-	float		y;
-	float		angle;
-	float		end;
-	float distance;
+	float planeX;
+	float planeY;
+	float dir_x;
+	float dir_y;
 }				  t_plr;
 
 typedef struct s_texture
@@ -76,13 +100,24 @@ typedef struct s_texture
 
 }				t_texture;
 
+typedef struct s_draw
+{
+	int		lineHeight;
+	int		drawStart;
+	int		drawEnd;
+	double	step;
+	double	texPos;
+	int		texY;
+}				t_draw;
+
 typedef struct s_all
 {
 	t_data		*img;
 	t_map		*map;
 	t_struct	*params;
 	t_plr		*ray;
-	t_texture 	*texture;
+	t_plr		*plr;
+	t_texture 	*tex;
 }				t_all;
 
 
@@ -110,4 +145,5 @@ void			ft_secondlookmap(int fd, t_map *map);
 void			ft_validmap(t_map *map);
 void			ft_create_window(t_all *all);
 int				key_hook(int key, t_all *all);
+double			radian(double degree);
 #endif

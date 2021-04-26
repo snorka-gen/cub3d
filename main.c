@@ -21,9 +21,13 @@ int main(int argc, char **argv)
 	int			fd;
 	t_all		*all;
 	t_texture texture;
+	t_plr plr;
+	t_plr ray;
 
 	all = malloc(sizeof (t_all));
-	all->texture = &texture;
+	all->tex = &texture;
+	all->plr = &plr;
+	all->ray = &ray;
 	all->img = malloc(sizeof(t_data));
 	all->ray = malloc(sizeof (t_plr));
 	fd = open(argv[1], O_RDONLY);
