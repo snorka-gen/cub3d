@@ -14,5 +14,6 @@ t_map	*ft_map_init()
 	map->count = 0;
 	map->player = 0;
 	map->map = NULL;
+	map->sprite = 0;
 	return (map);
 }

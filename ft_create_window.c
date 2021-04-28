@@ -20,16 +20,28 @@ static void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 static void texture_test(t_all *all)
 {
-	all->tex->img = mlx_xpm_file_to_image(all->img->mlx, all->params->no, &all->tex->width, &all->tex->height);
-	all->tex->addr = mlx_get_data_addr(all->tex->img, &all->tex->bits_per_pixel, &all->tex->line_length,
-										&all->tex->endian);
+	all->tex[0].img = mlx_xpm_file_to_image(all->img->mlx, all->params->no, &all->tex[0].width, &all->tex[0].height);
+	all->tex[0].addr = mlx_get_data_addr(all->tex[0].img, &all->tex[0].bits_per_pixel, &all->tex[0].line_length,
+										&all->tex[0].endian);
+	all->tex[1].img = mlx_xpm_file_to_image(all->img->mlx, all->params->so, &all->tex[1].width, &all->tex[1].height);
+	all->tex[1].addr = mlx_get_data_addr(all->tex[1].img, &all->tex[1].bits_per_pixel, &all->tex[1].line_length,
+									   &all->tex[1].endian);
+	all->tex[2].img = mlx_xpm_file_to_image(all->img->mlx, all->params->ea, &all->tex[2].width, &all->tex[2].height);
+	all->tex[2].addr = mlx_get_data_addr(all->tex[2].img, &all->tex[2].bits_per_pixel, &all->tex[2].line_length,
+									   &all->tex[2].endian);
+	all->tex[3].img = mlx_xpm_file_to_image(all->img->mlx, all->params->we, &all->tex[3].width, &all->tex[3].height);
+	all->tex[3].addr = mlx_get_data_addr(all->tex[3].img, &all->tex[3].bits_per_pixel, &all->tex[3].line_length,
+									   &all->tex[3].endian);
+	all->tex[4].img = mlx_xpm_file_to_image(all->img->mlx, all->params->s, &all->tex[4].width, &all->tex[4].height);
+	all->tex[4].addr = mlx_get_data_addr(all->tex[4].img, &all->tex[4].bits_per_pixel, &all->tex[4].line_length,
+										 &all->tex[4].endian);
 }
 
-void get_tex_color(t_all *all, int x, int y)
+void get_tex_color(t_all *all, int x, int y, int i)
 {
 	char *dst;
-	dst = all->tex->addr + (y * all->tex->line_length + x * (all->tex->bits_per_pixel/8));
-	all->tex->color = *(unsigned int *)dst;
+	dst = all->tex[i].addr + (y * all->tex[i].line_length + x * (all->tex[i].bits_per_pixel/8));
+	all->tex[i].color = *(unsigned int *)dst;
 }
 //void put_the_wall(t_all *all, float c, size_t x)
 //{
@@ -436,21 +448,24 @@ void get_tex_color(t_all *all, int x, int y)
 ////			i++;
 //		}
 ////	}
+
+
 		void get_distance_params(t_all *all, t_dist *dist, int i)
 		{
 			dist->cameraX = 2 * i / (double)all->params->x - 1;
+//			printf("camerax = %f\n", dist->cameraX);
 			dist->rayDirX = all->map->dir_x + all->map->planeX * dist->cameraX;
 			dist->rayDirY = all->map->dir_y + all->map->planeY * dist->cameraX;
 			if (dist->rayDirY == 0)
 				dist->deltaDistX = 0;
 			else if (dist->rayDirX == 0)
-				dist->deltaDistX = 0;
+				dist->deltaDistX = 1;
 			else
 				dist->deltaDistX= fabs(1/dist->rayDirX);
 			if (dist->rayDirX == 0)
 				dist->deltaDistY = 0;
 			else if (dist->rayDirY == 0)
-				dist->deltaDistY = 0;
+				dist->deltaDistY = 1;
 			else dist->deltaDistY = fabs(1/dist->rayDirY);
 		}
 
@@ -480,24 +495,42 @@ void get_tex_color(t_all *all, int x, int y)
 			}
 		}
 
-		void dda_distance2(t_all *all, t_dist *dist)
+		void dda_distance2(t_all *all, t_dist *dist, int i, int x)
 		{
 			if (dist->side == 0) {
 				dist->perpWallDist = (dist->mapX - all->map->playerx + (1 - dist->stepX) / 2) / dist->rayDirX;
-				all->tex->wallX = all->map->playery + dist->perpWallDist * dist->rayDirY;
+				all->tex[i].wallX = all->map->playery + dist->perpWallDist * dist->rayDirY;
 			}
 			else {
 				dist->perpWallDist = (dist->mapY - all->map->playery + (1 - dist->stepY) / 2) / dist->rayDirY;
-				all->tex->wallX = all->map->playerx + dist->perpWallDist * dist->rayDirX;
+				all->tex[i].wallX = all->map->playerx + dist->perpWallDist * dist->rayDirX;
 			}
-			all->tex->wallX -= floor(all->tex->wallX);
-			all->tex->texX = (int)(all->tex->wallX * (double)all->tex->width);
+			all->tex[i].wallX -= floor(all->tex[i].wallX);
+			all->tex[i].texX = (int)(all->tex[i].wallX * (double)all->tex[i].width);
 			if (dist->side == 0 && dist->rayDirX > 0)
-				all->tex->texX = all->tex->width - all->tex->texX - 1;
+				all->tex[i].texX = all->tex[i].width - all->tex[i].texX - 1;
 			if (dist->side == 1 && dist->rayDirY < 0)
-				all->tex->texX = all->tex->width - all->tex->texX - 1;
+				all->tex[i].texX = all->tex[i].width - all->tex[i].texX - 1;
 		}
 
+		int what_side(t_all *all, t_dist *dist)
+		{
+			if (dist->side == 0)
+			{
+				if (dist->rayDirX < 0)
+					return (0);
+				if (dist->rayDirX > 0)
+					return (1);
+			}
+			if (dist->side == 1)
+			{
+				if (dist->rayDirY < 0)
+					return (2);
+				if (dist->rayDirY > 0)
+					return (3);
+			}
+			return (0);
+		}
 		void dda_distance(t_all *all, t_dist *dist)
 		{
 			int hit;
@@ -517,10 +550,9 @@ void get_tex_color(t_all *all, int x, int y)
 				if (all->map->map[dist->mapX][dist->mapY] == '1')
 					hit = 1;
 			}
-			dda_distance2(all, dist);
 		}
 
-		void put_the_wall(t_all *all, t_dist *dist, int x)
+		void put_the_wall(t_all *all, t_dist *dist, int x, int i)
 		{
 			t_draw draw;
 
@@ -531,17 +563,136 @@ void get_tex_color(t_all *all, int x, int y)
 			draw.drawEnd = draw.lineHeight / 2 + all->params->y / 2;
 			if (draw.drawEnd >= all->params->y)
 				draw.drawEnd = all->params->y - 1;
-			draw.step = 1.0 * all->tex->height / draw.lineHeight;
+			draw.step = 1.0 * all->tex[i].height / draw.lineHeight;
 			draw.texPos = (draw.drawStart - all->params->y / 2 + draw.lineHeight / 2) * draw.step;
 			while (draw.drawStart < draw.drawEnd)
 			{
-				draw.texY = (int)draw.texPos & (all->tex->height - 1);
+				draw.texY = (int)draw.texPos & (all->tex[i].height - 1);
 				draw.texPos += draw.step;
-				get_tex_color(all, all->tex->texX, draw.texY);
-				my_mlx_pixel_put(all->img, x, draw.drawStart++, all->tex->color);
+				get_tex_color(all, all->tex[i].texX, draw.texY, i);
+				my_mlx_pixel_put(all->img, x, draw.drawStart++, all->tex[i].color);
+			}
+
+//			printf("dist = %f\n", dist->perpWallDist);
+		}
+
+		void sprite_sort(t_sprite *sp, int x)
+		{
+			int		i;
+			int		j;
+			t_sprite temp;
+
+			i = 0;
+			while (i < x)
+			{
+				j = x;
+				while (j  > i)
+				{
+					if (sp[j - 1].dis < sp[j].dis)
+					{
+//						temp = sp[j - 1].dis;
+//						sp[j - 1].dis = sp[j].dis;
+//						sp[j].dis = temp;
+						temp.x = sp[j - 1].x;
+						temp.y = sp[j - 1].y;
+						temp.dis = sp[j - 1].dis;
+						sp[j - 1].x = sp[j].x;
+						sp[j - 1].y = sp[j].y;
+						sp[j - 1].dis = sp[j].dis;
+						sp[j].x = temp.x;
+						sp[j].y = temp.y;
+						sp[j].dis = temp.dis;
+					}
+					j--;
+				}
+				i++;
 			}
 		}
 
+		void sprite_dis(t_sprite *sp, int x, float posX, float posY)
+		{
+			int i;
+
+			i = 0;
+			while (i < x)
+			{
+				sp[i].dis = (posX - sp[i].x) * (posX - sp[i].x) + (posY - sp[i].y) * (posY - sp[i].y);
+				i++;
+			}
+			sprite_sort(sp, x - 1);
+//			i = 0;
+//			while (i < x)
+//			{
+//				printf("dis = %f\n", sp[i].dis);
+//				i++;
+//			}
+		}
+
+		void get_drawSpriteParams(t_all *all, t_drawSprite *ds)
+		{
+			int i;
+
+			i = 0;
+			while (i < all->map->sprite)
+			{
+				ds->spriteX = all->map->sp[i].x - all->map->playerx;
+				ds->spriteY = all->map->sp[i].y - all->map->playery;
+				printf("x %f, y %f\n", ds->spriteX, ds->spriteY);
+				ds->invDet = 1.0 / (all->map->planeX * all->map->dir_y - all->map->dir_x * all->map->planeY);
+				ds->transformX = ds->invDet * (all->map->dir_y * ds->spriteX - all->map->dir_x * ds->spriteY);
+				ds->transformY = ds->invDet * (-all->map->planeY * ds->spriteX + all->map->planeX * ds->spriteY);
+//				printf("transformY %f\n", ds->transformY);
+				ds->spriteScreenX = (int)((all->params->x / 2) * (1 + ds->transformX / ds->transformY));
+//				printf("screenX %d\n", ds->spriteScreenX);
+				ds->spriteHeight = abs((int)(all->params->y / ds->transformY));
+				ds->drawStartY = -ds->spriteHeight / 2 + all->params->y / 2;
+				if (ds->drawStartY < 0)
+					ds->drawStartY = 0;
+				ds->drawEndY = ds->spriteHeight / 2 + all->params->y / 2;
+				if (ds->drawEndY >= all->params->y)
+					ds->drawEndY = all->params->y - 1;
+				ds->spriteWidth = abs((int)(all->params->y / ds->transformY));
+
+//				printf("width %d\n", ds->spriteWidth);
+				ds->drawStartX =  ds->spriteScreenX - ds->spriteWidth / 2;
+				if (ds->drawStartX < 0)
+					ds->drawStartX = 0;
+				ds->drawEndX = ds->spriteWidth / 2 + ds->spriteScreenX;
+				if (ds->drawEndX >= all->params->x)
+					ds->drawEndX = all->params->x - 1;
+				ds->stripe = ds->drawStartX;
+//				printf("stripe %d EndX %d\n", ds->stripe, ds->drawEndX);
+				while (ds->stripe < ds->drawEndX)
+				{
+					ds->texX = (int)(256 * (ds->stripe - (-ds->spriteWidth / 2 + ds->spriteScreenX)
+							 * all->tex[4].width / ds->spriteWidth) / 256);
+					if (ds->transformY > 0 && ds->stripe > 0 && ds->stripe < all->params->x && ds->transformY < all->ZBuffer[ds->stripe])
+						ds->y = ds->drawStartY;
+						while (ds->y < ds->drawEndY)
+						{
+							ds->d = (ds->y) * 256 - all->params->y * 128 + ds->spriteHeight * 128;
+							ds->texY = ((ds->d * all->tex[4].height) / ds->spriteHeight) / 256;
+							get_tex_color(all, ds->texX, ds->texY, 4);
+							if ((all->tex[4].color & 0xFFFFFF) != 0)
+								my_mlx_pixel_put(all->img, ds->stripe, ds->y, all->tex[4].color);
+							ds->y++;
+						}
+					ds->stripe++;
+				}
+
+//				printf("hello\n");
+				i++;
+			}
+		}
+
+		void put_sprites(t_all *all)
+		{
+			t_drawSprite ds;
+
+			sprite_dis(all->map->sp, all->map->sprite, all->map->playerx, all->map->playery);
+			get_drawSpriteParams(all, &ds);
+
+		}
 		static void put_floor(t_all *all)
 		{
 			int x;
@@ -574,6 +725,7 @@ void get_tex_color(t_all *all, int x, int y)
 		{
 			t_dist dist;
 			int i;
+			int x;
 
 			i = 0;
 			put_floor(all);
@@ -582,8 +734,13 @@ void get_tex_color(t_all *all, int x, int y)
 				get_distance_params(all, &dist, i);
 				get_distance_params2(all, &dist);
 				dda_distance(all, &dist);
-				put_the_wall(all, &dist, i);
-//				printf("wallX = %f, texX = %d, dir = %f\n", all->tex->wallX, all->tex->texX, all->map->dir_x);
+				x = what_side(all, &dist);
+				dda_distance2(all, &dist, x, i);
+
+				all->ZBuffer[i] = dist.perpWallDist;
+//				printf("%f\n", all->ZBuffer[i]);
+				put_the_wall(all, &dist, i, x);
+				put_sprites(all);
 				i++;
 			}
 			mlx_put_image_to_window(all->img->mlx, all->img->win, all->img->img, 0, 0);
@@ -597,9 +754,11 @@ void get_tex_color(t_all *all, int x, int y)
 			tempX = all->map->playerx - all->map->dir_x * 2 * MOVESPEED;
 			tempY = all->map->playery - all->map->dir_y * 2 * MOVESPEED;
 			if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
-				all->map->playerx -= all->map->dir_x *  MOVESPEED;
+				if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
+					all->map->playerx -= all->map->dir_x *  MOVESPEED;
 			if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
-				all->map->playery -= all->map->dir_y  * MOVESPEED;
+				if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
+					all->map->playery -= all->map->dir_y  * MOVESPEED;
 			draw_map(all);
 		}
 
@@ -611,9 +770,11 @@ void get_tex_color(t_all *all, int x, int y)
 			tempX = all->map->playerx + all->map->dir_x * 2 * MOVESPEED;
 			tempY = all->map->playery + all->map->dir_y * 2 * MOVESPEED;
 			if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
-				all->map->playerx += all->map->dir_x *  MOVESPEED;
+				if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
+					all->map->playerx += all->map->dir_x *  MOVESPEED;
 			if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
-				all->map->playery += all->map->dir_y  * MOVESPEED;
+				if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
+					all->map->playery += all->map->dir_y  * MOVESPEED;
 			draw_map(all);
 		}
 
@@ -657,8 +818,10 @@ void get_tex_color(t_all *all, int x, int y)
 			tempX = all->map->playerx + all->map->dir_y * 2 * MOVESPEED;
 			tempY = all->map->playery - all->map->dir_x * 2 * MOVESPEED;
 			if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
+				if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
 				all->map->playerx += all->map->dir_y * MOVESPEED;
 			if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
+				if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
 				all->map->playery -= all->map->dir_x * MOVESPEED;
 			draw_map(all);
 		}
@@ -670,14 +833,15 @@ void get_tex_color(t_all *all, int x, int y)
 			tempX = all->map->playerx - all->map->dir_y * 2 * MOVESPEED;
 			tempY = all->map->playery + all->map->dir_x * 2 * MOVESPEED;
 			if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
+				if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
 				all->map->playerx -= all->map->dir_y * MOVESPEED;
 			if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
+				if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
 				all->map->playery += all->map->dir_x * MOVESPEED;
 			draw_map(all);
 		}
 
 		int key_hook(int key, t_all *all) {
-//		mlx_clear_window(all->img->mlx, all->img->win);
 			if (key == 13)
 				press_w(all);
 			if (key == 1)
@@ -694,7 +858,6 @@ void get_tex_color(t_all *all, int x, int y)
 				mlx_destroy_window(all->img->mlx, all->img->win);
 				exit(0);
 			}
-//		draw_map(all);
 			return (0);
 		}
 
@@ -713,6 +876,7 @@ void get_tex_color(t_all *all, int x, int y)
 			texture_test(all);
 			all->map->dist = (all->params->x / 2) / tan(0.575959);
 			draw_map(all);
+//			printf("%f\n", all->ZBuffer[0]);
 //		all->texture->img = mlx_xpm_file_to_image(all->img->mlx, all->params->no, &all->texture->width, &all->texture->height);
 //			draw_map(all);
 //		printf("%lf\n", all->map->rad);

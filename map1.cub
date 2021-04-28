@@ -1,17 +1,17 @@
 R 600 600
 
-NO ./textures/redbrick.xpm
-SO ./textures/redbrick.xpm
-WE ./textures/wood.xpm
+NO ./textures/BRICK7.xpm
+SO ./textures/BRICK8.xpm
+WE ./textures/BRICK9.xpm
      S    ./textures/barrel.xpm
-EA ./textures/colorstone.xpm
+EA ./textures/BRICK10.xpm
 
 
 F 255, 255, 255
 C 0, 0, 0
 
 1111111111
-1000000001
-1000E10001
-1000001001
+1000200001
+1000010001
+1000N01001
 1111111111

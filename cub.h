@@ -30,7 +30,12 @@ typedef struct s_struct
 	int 	up;
 	int 	down;
 }				t_struct;
-
+typedef struct s_sprite
+{
+	float x;
+	float y;
+	float dis;
+}				t_sprite;
 typedef struct s_map
 {
 	int		len;
@@ -42,6 +47,8 @@ typedef struct s_map
 	float planeY;
 	float dir_x;
 	float dir_y;
+	int sprite;
+	t_sprite *sp;
 	char	**map;
 	int 	side;
 	float	rad;
@@ -110,6 +117,27 @@ typedef struct s_draw
 	int		texY;
 }				t_draw;
 
+typedef struct s_drawSprite
+{
+	double spriteX;
+	double spriteY;
+	double invDet;
+	double transformX;
+	double transformY;
+	int spriteScreenX;
+	int spriteHeight;
+	int drawStartY;
+	int drawEndY;
+	int stripe;
+	int spriteWidth;
+	int drawStartX;
+	int drawEndX;
+	int texY;
+	int texX;
+	int d;
+	int y;
+}			t_drawSprite;
+
 typedef struct s_all
 {
 	t_data		*img;
@@ -118,6 +146,7 @@ typedef struct s_all
 	t_plr		*ray;
 	t_plr		*plr;
 	t_texture 	*tex;
+	float		*ZBuffer;
 }				t_all;
 
 

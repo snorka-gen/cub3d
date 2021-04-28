@@ -61,14 +61,25 @@ void	ft_validmap(t_map *map)
 {
 	int i;
 	int j;
+	int x;
 
+	map->sp = malloc(sizeof(t_sprite));
+	if (map->sp == NULL)
+		ft_check_error(0);
 	i = 1;
+	x = 0;
 	ft_check_perimetr(map);
 	while (i < map->count - 1)
 	{
 		j = 1;
 		while (j < map->len)
 		{
+			if (map->map[i][j] == '2')
+			{
+				map->sp[x].x = i;
+				map->sp[x].y = j;
+				x++;
+			}
 			if (map->map[i][j] != '1' && map->map[i][j] != ' ')
 				ft_hateful_eight(map->map, i , j);
 			j++;

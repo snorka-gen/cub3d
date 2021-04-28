@@ -12,7 +12,15 @@
 
 #include "cub.h"
 
+void create_buf(t_all *all)
+{
+	float *ZBuffer;
 
+	ZBuffer = malloc(sizeof (double) * all->params->x);
+	if (ZBuffer == NULL)
+		exit(0);
+	all->ZBuffer = ZBuffer;
+}
 
 
 int main(int argc, char **argv)
@@ -20,12 +28,12 @@ int main(int argc, char **argv)
 	(void)		argc;
 	int			fd;
 	t_all		*all;
-	t_texture texture;
+	t_texture texture[4];
 	t_plr plr;
 	t_plr ray;
 
 	all = malloc(sizeof (t_all));
-	all->tex = &texture;
+	all->tex = texture;
 	all->plr = &plr;
 	all->ray = &ray;
 	all->img = malloc(sizeof(t_data));
@@ -44,6 +52,8 @@ int main(int argc, char **argv)
 //	printf("%d, %f\n", (int)x[0],x[1]);
 	fd = open(argv[1], O_RDONLY);
 	ft_secondlookmap(fd, all->map);
+	create_buf(all);
+	printf("sprites = %d\n", all->map->sprite);
 	ft_create_window(all);
 
 
