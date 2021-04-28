@@ -1,4 +1,4 @@
-# Install script for directory: /Users/aidasajdaseva/CLionProjects/cub
+# Install script for directory: /Users/fcassey/CLionProjects/cub3d2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

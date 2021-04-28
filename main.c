@@ -29,32 +29,18 @@ int main(int argc, char **argv)
 	int			fd;
 	t_all		*all;
 	t_texture texture[4];
-	t_plr plr;
-	t_plr ray;
 
 	all = malloc(sizeof (t_all));
 	all->tex = texture;
-	all->plr = &plr;
-	all->ray = &ray;
 	all->img = malloc(sizeof(t_data));
-	all->ray = malloc(sizeof (t_plr));
 	fd = open(argv[1], O_RDONLY);
 	all->params = ft_struct_init();
 	all->map = ft_map_init();
 	ft_get_params(fd, all->params);
 	ft_fisrtlookmap(fd, all->map);
 	close (fd);
-//	double test = 10053/64;
-//	double test2 = floor(test);
-//	printf("double %lf\nint %d\nfloor %lf\nint floor %d\n", test, (int)(test), floor(test), (int)floor(test));
-//	double x[2];
-//	modf(63/64, x);
-//	printf("%d, %f\n", (int)x[0],x[1]);
 	fd = open(argv[1], O_RDONLY);
 	ft_secondlookmap(fd, all->map);
 	create_buf(all);
-	printf("sprites = %d\n", all->map->sprite);
 	ft_create_window(all);
-
-
 }

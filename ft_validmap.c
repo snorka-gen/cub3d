@@ -12,14 +12,14 @@ static void	ft_topbot(t_map *map)
 	while(map->map[0][i])
 	{
 		if (map->map[0][i] != ' ' && map->map[0][i] != '1')
-			ft_check_error(7);
+			ft_check_error("Not enough walls\n");
 		i++;
 	}
 	i = 0;
 	while (map->map[map->count - 1][i])
 	{
 		if (map->map[map->count - 1][i] != ' ' && map->map[map->count - 1][i] != '1')
-			ft_check_error(7);
+			ft_check_error("Not enough walls\n");
 		i++;
 	}
 }
@@ -33,14 +33,14 @@ static void	ft_check_perimetr(t_map *map)
 	while (i < map->count)
 	{
 		if (map->map[i][0] != ' ' && map->map[i][0] != '1')
-			ft_check_error(7);
+			ft_check_error("Not enough walls\n");
 		i++;
 	}
 	i = 0;
 	while (i < map->count)
 	{
 		if (map->map[i][map->len] != ' ' && map->map[i][map->len] != '1')
-			ft_check_error(7);
+			ft_check_error("Not enough walls\n");
 		i++;
 	}
 }
@@ -53,7 +53,7 @@ static void ft_hateful_eight(char **line, int i, int j)
 	line[i - 1][j + 1] == ' ' || line[i][j - 1] == ' ' ||
 	line[i][j + 1] == ' ' || line[i + 1][j - 1] == ' ' ||
 	line[i + 1][j] == ' ' || line[i + 1][j + 1] == ' ') {
-		ft_check_error(7);
+		ft_check_error("Wrong map\n");
 	}
 }
 
@@ -65,7 +65,7 @@ void	ft_validmap(t_map *map)
 
 	map->sp = malloc(sizeof(t_sprite));
 	if (map->sp == NULL)
-		ft_check_error(0);
+		ft_check_error("Malloc Error\n");
 	i = 1;
 	x = 0;
 	ft_check_perimetr(map);

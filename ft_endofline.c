@@ -5,7 +5,7 @@
 	 while (line[i] != '\0')
 	 {
 		 if (line[i] != ' ')
-			 ft_check_error(5);
+			 ft_check_error("Something get wrong with map\n");
 		 i++;
 	 }
  }

@@ -67,10 +67,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aidasajdaseva/CLionProjects/cub
+CMAKE_SOURCE_DIR = /Users/fcassey/CLionProjects/cub3d2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -844,6 +844,87 @@ minilibx_opengl_20191021/mlx_get_screen_size.m.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
 .PHONY : minilibx_opengl_20191021/mlx_get_screen_size.m.s
 
+raycast_one.o: raycast_one.c.o
+
+.PHONY : raycast_one.o
+
+# target to build an object file
+raycast_one.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_one.c.o
+.PHONY : raycast_one.c.o
+
+raycast_one.i: raycast_one.c.i
+
+.PHONY : raycast_one.i
+
+# target to preprocess a source file
+raycast_one.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_one.c.i
+.PHONY : raycast_one.c.i
+
+raycast_one.s: raycast_one.c.s
+
+.PHONY : raycast_one.s
+
+# target to generate assembly for a file
+raycast_one.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_one.c.s
+.PHONY : raycast_one.c.s
+
+raycast_three.o: raycast_three.c.o
+
+.PHONY : raycast_three.o
+
+# target to build an object file
+raycast_three.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_three.c.o
+.PHONY : raycast_three.c.o
+
+raycast_three.i: raycast_three.c.i
+
+.PHONY : raycast_three.i
+
+# target to preprocess a source file
+raycast_three.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_three.c.i
+.PHONY : raycast_three.c.i
+
+raycast_three.s: raycast_three.c.s
+
+.PHONY : raycast_three.s
+
+# target to generate assembly for a file
+raycast_three.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_three.c.s
+.PHONY : raycast_three.c.s
+
+raycast_two.o: raycast_two.c.o
+
+.PHONY : raycast_two.o
+
+# target to build an object file
+raycast_two.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_two.c.o
+.PHONY : raycast_two.c.o
+
+raycast_two.i: raycast_two.c.i
+
+.PHONY : raycast_two.i
+
+# target to preprocess a source file
+raycast_two.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_two.c.i
+.PHONY : raycast_two.c.i
+
+raycast_two.s: raycast_two.c.s
+
+.PHONY : raycast_two.s
+
+# target to generate assembly for a file
+raycast_two.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_two.c.s
+.PHONY : raycast_two.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -931,6 +1012,15 @@ help:
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.o"
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.i"
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.s"
+	@echo "... raycast_one.o"
+	@echo "... raycast_one.i"
+	@echo "... raycast_one.s"
+	@echo "... raycast_three.o"
+	@echo "... raycast_three.i"
+	@echo "... raycast_three.s"
+	@echo "... raycast_two.o"
+	@echo "... raycast_two.i"
+	@echo "... raycast_two.s"
 .PHONY : help
 
 

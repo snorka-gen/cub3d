@@ -62,10 +62,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aidasajdaseva/CLionProjects/cub
+CMAKE_SOURCE_DIR = /Users/fcassey/CLionProjects/cub3d2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cub.dir/depend.make
@@ -78,341 +78,380 @@ include CMakeFiles/cub.dir/flags.make
 
 CMakeFiles/cub.dir/main.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cub.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/main.c.o -c /Users/aidasajdaseva/CLionProjects/cub/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cub.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/main.c.o -c /Users/fcassey/CLionProjects/cub3d2/main.c
 
 CMakeFiles/cub.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/main.c > CMakeFiles/cub.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/main.c > CMakeFiles/cub.dir/main.c.i
 
 CMakeFiles/cub.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/main.c -o CMakeFiles/cub.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/main.c -o CMakeFiles/cub.dir/main.c.s
 
 CMakeFiles/cub.dir/libft/ft_spacealloc.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/libft/ft_spacealloc.c.o: ../libft/ft_spacealloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cub.dir/libft/ft_spacealloc.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/libft/ft_spacealloc.c.o -c /Users/aidasajdaseva/CLionProjects/cub/libft/ft_spacealloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cub.dir/libft/ft_spacealloc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/libft/ft_spacealloc.c.o -c /Users/fcassey/CLionProjects/cub3d2/libft/ft_spacealloc.c
 
 CMakeFiles/cub.dir/libft/ft_spacealloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/libft/ft_spacealloc.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/libft/ft_spacealloc.c > CMakeFiles/cub.dir/libft/ft_spacealloc.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/libft/ft_spacealloc.c > CMakeFiles/cub.dir/libft/ft_spacealloc.c.i
 
 CMakeFiles/cub.dir/libft/ft_spacealloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/libft/ft_spacealloc.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/libft/ft_spacealloc.c -o CMakeFiles/cub.dir/libft/ft_spacealloc.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/libft/ft_spacealloc.c -o CMakeFiles/cub.dir/libft/ft_spacealloc.c.s
 
 CMakeFiles/cub.dir/ft_struct_init.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_struct_init.c.o: ../ft_struct_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cub.dir/ft_struct_init.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_struct_init.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_struct_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cub.dir/ft_struct_init.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_struct_init.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_struct_init.c
 
 CMakeFiles/cub.dir/ft_struct_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_struct_init.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_struct_init.c > CMakeFiles/cub.dir/ft_struct_init.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_struct_init.c > CMakeFiles/cub.dir/ft_struct_init.c.i
 
 CMakeFiles/cub.dir/ft_struct_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_struct_init.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_struct_init.c -o CMakeFiles/cub.dir/ft_struct_init.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_struct_init.c -o CMakeFiles/cub.dir/ft_struct_init.c.s
 
 CMakeFiles/cub.dir/ft_check_error.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_check_error.c.o: ../ft_check_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/cub.dir/ft_check_error.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_check_error.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_check_error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/cub.dir/ft_check_error.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_check_error.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_check_error.c
 
 CMakeFiles/cub.dir/ft_check_error.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_check_error.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_check_error.c > CMakeFiles/cub.dir/ft_check_error.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_check_error.c > CMakeFiles/cub.dir/ft_check_error.c.i
 
 CMakeFiles/cub.dir/ft_check_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_check_error.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_check_error.c -o CMakeFiles/cub.dir/ft_check_error.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_check_error.c -o CMakeFiles/cub.dir/ft_check_error.c.s
 
 CMakeFiles/cub.dir/ft_get_params.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_params.c.o: ../ft_get_params.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/cub.dir/ft_get_params.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_params.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_params.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/cub.dir/ft_get_params.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_params.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_params.c
 
 CMakeFiles/cub.dir/ft_get_params.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_params.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_params.c > CMakeFiles/cub.dir/ft_get_params.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_params.c > CMakeFiles/cub.dir/ft_get_params.c.i
 
 CMakeFiles/cub.dir/ft_get_params.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_params.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_params.c -o CMakeFiles/cub.dir/ft_get_params.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_params.c -o CMakeFiles/cub.dir/ft_get_params.c.s
 
 CMakeFiles/cub.dir/ft_start_parsing.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_start_parsing.c.o: ../ft_start_parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/cub.dir/ft_start_parsing.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_start_parsing.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_start_parsing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/cub.dir/ft_start_parsing.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_start_parsing.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_start_parsing.c
 
 CMakeFiles/cub.dir/ft_start_parsing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_start_parsing.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_start_parsing.c > CMakeFiles/cub.dir/ft_start_parsing.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_start_parsing.c > CMakeFiles/cub.dir/ft_start_parsing.c.i
 
 CMakeFiles/cub.dir/ft_start_parsing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_start_parsing.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_start_parsing.c -o CMakeFiles/cub.dir/ft_start_parsing.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_start_parsing.c -o CMakeFiles/cub.dir/ft_start_parsing.c.s
 
 CMakeFiles/cub.dir/libft/ft_intstrchr.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/libft/ft_intstrchr.c.o: ../libft/ft_intstrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/cub.dir/libft/ft_intstrchr.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/libft/ft_intstrchr.c.o -c /Users/aidasajdaseva/CLionProjects/cub/libft/ft_intstrchr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/cub.dir/libft/ft_intstrchr.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/libft/ft_intstrchr.c.o -c /Users/fcassey/CLionProjects/cub3d2/libft/ft_intstrchr.c
 
 CMakeFiles/cub.dir/libft/ft_intstrchr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/libft/ft_intstrchr.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/libft/ft_intstrchr.c > CMakeFiles/cub.dir/libft/ft_intstrchr.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/libft/ft_intstrchr.c > CMakeFiles/cub.dir/libft/ft_intstrchr.c.i
 
 CMakeFiles/cub.dir/libft/ft_intstrchr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/libft/ft_intstrchr.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/libft/ft_intstrchr.c -o CMakeFiles/cub.dir/libft/ft_intstrchr.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/libft/ft_intstrchr.c -o CMakeFiles/cub.dir/libft/ft_intstrchr.c.s
 
 CMakeFiles/cub.dir/ft_get_resolution.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_resolution.c.o: ../ft_get_resolution.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/cub.dir/ft_get_resolution.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_resolution.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_resolution.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/cub.dir/ft_get_resolution.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_resolution.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_resolution.c
 
 CMakeFiles/cub.dir/ft_get_resolution.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_resolution.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_resolution.c > CMakeFiles/cub.dir/ft_get_resolution.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_resolution.c > CMakeFiles/cub.dir/ft_get_resolution.c.i
 
 CMakeFiles/cub.dir/ft_get_resolution.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_resolution.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_resolution.c -o CMakeFiles/cub.dir/ft_get_resolution.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_resolution.c -o CMakeFiles/cub.dir/ft_get_resolution.c.s
 
 CMakeFiles/cub.dir/ft_endofline.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_endofline.c.o: ../ft_endofline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/cub.dir/ft_endofline.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_endofline.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_endofline.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/cub.dir/ft_endofline.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_endofline.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_endofline.c
 
 CMakeFiles/cub.dir/ft_endofline.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_endofline.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_endofline.c > CMakeFiles/cub.dir/ft_endofline.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_endofline.c > CMakeFiles/cub.dir/ft_endofline.c.i
 
 CMakeFiles/cub.dir/ft_endofline.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_endofline.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_endofline.c -o CMakeFiles/cub.dir/ft_endofline.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_endofline.c -o CMakeFiles/cub.dir/ft_endofline.c.s
 
 CMakeFiles/cub.dir/ft_get_north.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_north.c.o: ../ft_get_north.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/cub.dir/ft_get_north.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_north.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_north.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/cub.dir/ft_get_north.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_north.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_north.c
 
 CMakeFiles/cub.dir/ft_get_north.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_north.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_north.c > CMakeFiles/cub.dir/ft_get_north.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_north.c > CMakeFiles/cub.dir/ft_get_north.c.i
 
 CMakeFiles/cub.dir/ft_get_north.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_north.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_north.c -o CMakeFiles/cub.dir/ft_get_north.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_north.c -o CMakeFiles/cub.dir/ft_get_north.c.s
 
 CMakeFiles/cub.dir/ft_check_file.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_check_file.c.o: ../ft_check_file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/cub.dir/ft_check_file.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_check_file.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_check_file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/cub.dir/ft_check_file.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_check_file.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_check_file.c
 
 CMakeFiles/cub.dir/ft_check_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_check_file.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_check_file.c > CMakeFiles/cub.dir/ft_check_file.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_check_file.c > CMakeFiles/cub.dir/ft_check_file.c.i
 
 CMakeFiles/cub.dir/ft_check_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_check_file.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_check_file.c -o CMakeFiles/cub.dir/ft_check_file.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_check_file.c -o CMakeFiles/cub.dir/ft_check_file.c.s
 
 CMakeFiles/cub.dir/ft_get_south.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_south.c.o: ../ft_get_south.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/cub.dir/ft_get_south.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_south.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_south.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/cub.dir/ft_get_south.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_south.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_south.c
 
 CMakeFiles/cub.dir/ft_get_south.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_south.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_south.c > CMakeFiles/cub.dir/ft_get_south.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_south.c > CMakeFiles/cub.dir/ft_get_south.c.i
 
 CMakeFiles/cub.dir/ft_get_south.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_south.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_south.c -o CMakeFiles/cub.dir/ft_get_south.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_south.c -o CMakeFiles/cub.dir/ft_get_south.c.s
 
 CMakeFiles/cub.dir/ft_get_west.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_west.c.o: ../ft_get_west.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/cub.dir/ft_get_west.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_west.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_west.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/cub.dir/ft_get_west.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_west.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_west.c
 
 CMakeFiles/cub.dir/ft_get_west.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_west.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_west.c > CMakeFiles/cub.dir/ft_get_west.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_west.c > CMakeFiles/cub.dir/ft_get_west.c.i
 
 CMakeFiles/cub.dir/ft_get_west.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_west.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_west.c -o CMakeFiles/cub.dir/ft_get_west.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_west.c -o CMakeFiles/cub.dir/ft_get_west.c.s
 
 CMakeFiles/cub.dir/ft_get_east.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_east.c.o: ../ft_get_east.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/cub.dir/ft_get_east.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_east.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_east.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/cub.dir/ft_get_east.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_east.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_east.c
 
 CMakeFiles/cub.dir/ft_get_east.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_east.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_east.c > CMakeFiles/cub.dir/ft_get_east.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_east.c > CMakeFiles/cub.dir/ft_get_east.c.i
 
 CMakeFiles/cub.dir/ft_get_east.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_east.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_east.c -o CMakeFiles/cub.dir/ft_get_east.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_east.c -o CMakeFiles/cub.dir/ft_get_east.c.s
 
 CMakeFiles/cub.dir/ft_get_sprite.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_sprite.c.o: ../ft_get_sprite.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/cub.dir/ft_get_sprite.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_sprite.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_sprite.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/cub.dir/ft_get_sprite.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_sprite.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_sprite.c
 
 CMakeFiles/cub.dir/ft_get_sprite.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_sprite.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_sprite.c > CMakeFiles/cub.dir/ft_get_sprite.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_sprite.c > CMakeFiles/cub.dir/ft_get_sprite.c.i
 
 CMakeFiles/cub.dir/ft_get_sprite.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_sprite.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_sprite.c -o CMakeFiles/cub.dir/ft_get_sprite.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_sprite.c -o CMakeFiles/cub.dir/ft_get_sprite.c.s
 
 CMakeFiles/cub.dir/ft_get_floor.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_floor.c.o: ../ft_get_floor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/cub.dir/ft_get_floor.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_floor.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_floor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/cub.dir/ft_get_floor.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_floor.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_floor.c
 
 CMakeFiles/cub.dir/ft_get_floor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_floor.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_floor.c > CMakeFiles/cub.dir/ft_get_floor.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_floor.c > CMakeFiles/cub.dir/ft_get_floor.c.i
 
 CMakeFiles/cub.dir/ft_get_floor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_floor.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_floor.c -o CMakeFiles/cub.dir/ft_get_floor.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_floor.c -o CMakeFiles/cub.dir/ft_get_floor.c.s
 
 CMakeFiles/cub.dir/ft_get_ceiling.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_get_ceiling.c.o: ../ft_get_ceiling.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/cub.dir/ft_get_ceiling.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_ceiling.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_get_ceiling.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/cub.dir/ft_get_ceiling.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_get_ceiling.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_get_ceiling.c
 
 CMakeFiles/cub.dir/ft_get_ceiling.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_get_ceiling.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_get_ceiling.c > CMakeFiles/cub.dir/ft_get_ceiling.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_get_ceiling.c > CMakeFiles/cub.dir/ft_get_ceiling.c.i
 
 CMakeFiles/cub.dir/ft_get_ceiling.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_get_ceiling.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_get_ceiling.c -o CMakeFiles/cub.dir/ft_get_ceiling.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_get_ceiling.c -o CMakeFiles/cub.dir/ft_get_ceiling.c.s
 
 CMakeFiles/cub.dir/ft_map_init.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_map_init.c.o: ../ft_map_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/cub.dir/ft_map_init.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_map_init.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_map_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/cub.dir/ft_map_init.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_map_init.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_map_init.c
 
 CMakeFiles/cub.dir/ft_map_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_map_init.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_map_init.c > CMakeFiles/cub.dir/ft_map_init.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_map_init.c > CMakeFiles/cub.dir/ft_map_init.c.i
 
 CMakeFiles/cub.dir/ft_map_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_map_init.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_map_init.c -o CMakeFiles/cub.dir/ft_map_init.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_map_init.c -o CMakeFiles/cub.dir/ft_map_init.c.s
 
 CMakeFiles/cub.dir/ft_fisrtlookmap.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_fisrtlookmap.c.o: ../ft_fisrtlookmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/cub.dir/ft_fisrtlookmap.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_fisrtlookmap.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_fisrtlookmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/cub.dir/ft_fisrtlookmap.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_fisrtlookmap.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_fisrtlookmap.c
 
 CMakeFiles/cub.dir/ft_fisrtlookmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_fisrtlookmap.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_fisrtlookmap.c > CMakeFiles/cub.dir/ft_fisrtlookmap.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_fisrtlookmap.c > CMakeFiles/cub.dir/ft_fisrtlookmap.c.i
 
 CMakeFiles/cub.dir/ft_fisrtlookmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_fisrtlookmap.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_fisrtlookmap.c -o CMakeFiles/cub.dir/ft_fisrtlookmap.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_fisrtlookmap.c -o CMakeFiles/cub.dir/ft_fisrtlookmap.c.s
 
 CMakeFiles/cub.dir/ft_gnl.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_gnl.c.o: ../ft_gnl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/cub.dir/ft_gnl.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_gnl.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_gnl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/cub.dir/ft_gnl.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_gnl.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_gnl.c
 
 CMakeFiles/cub.dir/ft_gnl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_gnl.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_gnl.c > CMakeFiles/cub.dir/ft_gnl.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_gnl.c > CMakeFiles/cub.dir/ft_gnl.c.i
 
 CMakeFiles/cub.dir/ft_gnl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_gnl.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_gnl.c -o CMakeFiles/cub.dir/ft_gnl.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_gnl.c -o CMakeFiles/cub.dir/ft_gnl.c.s
 
 CMakeFiles/cub.dir/ft_maxlen.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_maxlen.c.o: ../ft_maxlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/cub.dir/ft_maxlen.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_maxlen.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_maxlen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/cub.dir/ft_maxlen.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_maxlen.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_maxlen.c
 
 CMakeFiles/cub.dir/ft_maxlen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_maxlen.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_maxlen.c > CMakeFiles/cub.dir/ft_maxlen.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_maxlen.c > CMakeFiles/cub.dir/ft_maxlen.c.i
 
 CMakeFiles/cub.dir/ft_maxlen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_maxlen.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_maxlen.c -o CMakeFiles/cub.dir/ft_maxlen.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_maxlen.c -o CMakeFiles/cub.dir/ft_maxlen.c.s
 
 CMakeFiles/cub.dir/ft_player_look.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_player_look.c.o: ../ft_player_look.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/cub.dir/ft_player_look.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_player_look.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_player_look.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/cub.dir/ft_player_look.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_player_look.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_player_look.c
 
 CMakeFiles/cub.dir/ft_player_look.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_player_look.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_player_look.c > CMakeFiles/cub.dir/ft_player_look.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_player_look.c > CMakeFiles/cub.dir/ft_player_look.c.i
 
 CMakeFiles/cub.dir/ft_player_look.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_player_look.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_player_look.c -o CMakeFiles/cub.dir/ft_player_look.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_player_look.c -o CMakeFiles/cub.dir/ft_player_look.c.s
 
 CMakeFiles/cub.dir/ft_secondlookmap.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_secondlookmap.c.o: ../ft_secondlookmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/cub.dir/ft_secondlookmap.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_secondlookmap.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_secondlookmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/cub.dir/ft_secondlookmap.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_secondlookmap.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_secondlookmap.c
 
 CMakeFiles/cub.dir/ft_secondlookmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_secondlookmap.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_secondlookmap.c > CMakeFiles/cub.dir/ft_secondlookmap.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_secondlookmap.c > CMakeFiles/cub.dir/ft_secondlookmap.c.i
 
 CMakeFiles/cub.dir/ft_secondlookmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_secondlookmap.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_secondlookmap.c -o CMakeFiles/cub.dir/ft_secondlookmap.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_secondlookmap.c -o CMakeFiles/cub.dir/ft_secondlookmap.c.s
 
 CMakeFiles/cub.dir/ft_validmap.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_validmap.c.o: ../ft_validmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/cub.dir/ft_validmap.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_validmap.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_validmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/cub.dir/ft_validmap.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_validmap.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_validmap.c
 
 CMakeFiles/cub.dir/ft_validmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_validmap.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_validmap.c > CMakeFiles/cub.dir/ft_validmap.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_validmap.c > CMakeFiles/cub.dir/ft_validmap.c.i
 
 CMakeFiles/cub.dir/ft_validmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_validmap.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_validmap.c -o CMakeFiles/cub.dir/ft_validmap.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_validmap.c -o CMakeFiles/cub.dir/ft_validmap.c.s
 
 CMakeFiles/cub.dir/ft_create_window.c.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/ft_create_window.c.o: ../ft_create_window.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/cub.dir/ft_create_window.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_create_window.c.o -c /Users/aidasajdaseva/CLionProjects/cub/ft_create_window.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/cub.dir/ft_create_window.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/ft_create_window.c.o -c /Users/fcassey/CLionProjects/cub3d2/ft_create_window.c
 
 CMakeFiles/cub.dir/ft_create_window.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/ft_create_window.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/ft_create_window.c > CMakeFiles/cub.dir/ft_create_window.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/ft_create_window.c > CMakeFiles/cub.dir/ft_create_window.c.i
 
 CMakeFiles/cub.dir/ft_create_window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/ft_create_window.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/ft_create_window.c -o CMakeFiles/cub.dir/ft_create_window.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/ft_create_window.c -o CMakeFiles/cub.dir/ft_create_window.c.s
 
 CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o: CMakeFiles/cub.dir/flags.make
 CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o: ../minilibx_opengl_20191021/mlx_get_screen_size.m
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o -c /Users/aidasajdaseva/CLionProjects/cub/minilibx_opengl_20191021/mlx_get_screen_size.m
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o -c /Users/fcassey/CLionProjects/cub3d2/minilibx_opengl_20191021/mlx_get_screen_size.m
 
 CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aidasajdaseva/CLionProjects/cub/minilibx_opengl_20191021/mlx_get_screen_size.m > CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/minilibx_opengl_20191021/mlx_get_screen_size.m > CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.i
 
 CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aidasajdaseva/CLionProjects/cub/minilibx_opengl_20191021/mlx_get_screen_size.m -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/minilibx_opengl_20191021/mlx_get_screen_size.m -o CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
+
+CMakeFiles/cub.dir/raycast_one.c.o: CMakeFiles/cub.dir/flags.make
+CMakeFiles/cub.dir/raycast_one.c.o: ../raycast_one.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/cub.dir/raycast_one.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/raycast_one.c.o -c /Users/fcassey/CLionProjects/cub3d2/raycast_one.c
+
+CMakeFiles/cub.dir/raycast_one.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/raycast_one.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/raycast_one.c > CMakeFiles/cub.dir/raycast_one.c.i
+
+CMakeFiles/cub.dir/raycast_one.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/raycast_one.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/raycast_one.c -o CMakeFiles/cub.dir/raycast_one.c.s
+
+CMakeFiles/cub.dir/raycast_two.c.o: CMakeFiles/cub.dir/flags.make
+CMakeFiles/cub.dir/raycast_two.c.o: ../raycast_two.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/cub.dir/raycast_two.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/raycast_two.c.o -c /Users/fcassey/CLionProjects/cub3d2/raycast_two.c
+
+CMakeFiles/cub.dir/raycast_two.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/raycast_two.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/raycast_two.c > CMakeFiles/cub.dir/raycast_two.c.i
+
+CMakeFiles/cub.dir/raycast_two.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/raycast_two.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/raycast_two.c -o CMakeFiles/cub.dir/raycast_two.c.s
+
+CMakeFiles/cub.dir/raycast_three.c.o: CMakeFiles/cub.dir/flags.make
+CMakeFiles/cub.dir/raycast_three.c.o: ../raycast_three.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/cub.dir/raycast_three.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cub.dir/raycast_three.c.o -c /Users/fcassey/CLionProjects/cub3d2/raycast_three.c
+
+CMakeFiles/cub.dir/raycast_three.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cub.dir/raycast_three.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fcassey/CLionProjects/cub3d2/raycast_three.c > CMakeFiles/cub.dir/raycast_three.c.i
+
+CMakeFiles/cub.dir/raycast_three.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cub.dir/raycast_three.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fcassey/CLionProjects/cub3d2/raycast_three.c -o CMakeFiles/cub.dir/raycast_three.c.s
 
 # Object files for target cub
 cub_OBJECTS = \
@@ -441,7 +480,10 @@ cub_OBJECTS = \
 "CMakeFiles/cub.dir/ft_secondlookmap.c.o" \
 "CMakeFiles/cub.dir/ft_validmap.c.o" \
 "CMakeFiles/cub.dir/ft_create_window.c.o" \
-"CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
+"CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o" \
+"CMakeFiles/cub.dir/raycast_one.c.o" \
+"CMakeFiles/cub.dir/raycast_two.c.o" \
+"CMakeFiles/cub.dir/raycast_three.c.o"
 
 # External object files for target cub
 cub_EXTERNAL_OBJECTS =
@@ -472,9 +514,12 @@ cub: CMakeFiles/cub.dir/ft_secondlookmap.c.o
 cub: CMakeFiles/cub.dir/ft_validmap.c.o
 cub: CMakeFiles/cub.dir/ft_create_window.c.o
 cub: CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o
+cub: CMakeFiles/cub.dir/raycast_one.c.o
+cub: CMakeFiles/cub.dir/raycast_two.c.o
+cub: CMakeFiles/cub.dir/raycast_three.c.o
 cub: CMakeFiles/cub.dir/build.make
 cub: CMakeFiles/cub.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C executable cub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking C executable cub"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cub.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -487,6 +532,6 @@ CMakeFiles/cub.dir/clean:
 .PHONY : CMakeFiles/cub.dir/clean
 
 CMakeFiles/cub.dir/depend:
-	cd /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/aidasajdaseva/CLionProjects/cub /Users/aidasajdaseva/CLionProjects/cub /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug /Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/CMakeFiles/cub.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/fcassey/CLionProjects/cub3d2 /Users/fcassey/CLionProjects/cub3d2 /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cub.dir/depend
 

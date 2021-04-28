@@ -1,17 +1,17 @@
 R 600 600
 
-NO ./textures/BRICK7.xpm
-SO ./textures/BRICK8.xpm
-WE ./textures/BRICK9.xpm
-     S    ./textures/barrel.xpm
-EA ./textures/BRICK10.xpm
+NO ./textures/eagle.xpm
+SO ./textures/eagle.xpm
+WE ./textures/eagle.xpm
+S./textures/barrel.xpm
+EA ./textures/eagle.xpm
 
 
 F 255, 255, 255
-C 0, 0, 0
+C 255, 255, 255
 
 1111111111
 1000200001
 1000010001
-1000N01001
+1020N01001
 1111111111

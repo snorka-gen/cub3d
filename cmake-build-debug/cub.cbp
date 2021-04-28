@@ -8,156 +8,173 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug"/>
+				<Option working_dir="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug"/>
+				<Option working_dir="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug"/>
+				<Option working_dir="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cub">
-				<Option output="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/cub" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug"/>
+				<Option output="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/cub" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cub/fast">
-				<Option output="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/cub" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug"/>
+				<Option output="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/cub" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aidasajdaseva/CLionProjects/cub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/cub.h">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/cub.h">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_check_error.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_check_error.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_check_file.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_check_file.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_create_window.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_create_window.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_endofline.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_endofline.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_fisrtlookmap.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_fisrtlookmap.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_ceiling.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_ceiling.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_east.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_east.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_floor.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_floor.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_north.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_north.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_params.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_params.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_resolution.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_resolution.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_south.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_south.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_sprite.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_sprite.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_get_west.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_get_west.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_gnl.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_gnl.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_map_init.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_map_init.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_maxlen.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_maxlen.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_player_look.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_player_look.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_secondlookmap.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_secondlookmap.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_start_parsing.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_start_parsing.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_struct_init.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_struct_init.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/ft_validmap.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/ft_validmap.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/libft/ft_intstrchr.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/libft/ft_intstrchr.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/libft/ft_spacealloc.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/libft/ft_spacealloc.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/main.c">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/main.c">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/minilibx_opengl_20191021/mlx_get_screen_size.m">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/minilibx_opengl_20191021/mlx_get_screen_size.m">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub/CMakeLists.txt">
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/move.cpp">
+			<Option target="cub"/>
+		</Unit>
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/raycast_four.cpp">
+			<Option target="cub"/>
+		</Unit>
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/raycast_one.c">
+			<Option target="cub"/>
+		</Unit>
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/raycast_three.c">
+			<Option target="cub"/>
+		</Unit>
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/raycast_two.c">
+			<Option target="cub"/>
+		</Unit>
+		<Unit filename="/Users/fcassey/CLionProjects/cub3d2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

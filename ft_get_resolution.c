@@ -18,7 +18,7 @@ static int ft_get_x(char *line, t_struct *params, int i, int width)
 			i++;
 		}
 	else
-		ft_check_error(1);
+		ft_check_error("Something wrong with resolution\n");
 	return (i);
 }
 
@@ -35,7 +35,7 @@ static int ft_get_y(char *line, t_struct *params, int i, int height)
 			i++;
 		}
 	else
-		ft_check_error(1);
+		ft_check_error("Something wrong with resolution\n");
 	return (i);
 }
 
@@ -46,7 +46,7 @@ void ft_get_resolution(char *line, t_struct *params, int i)
 
 	mlx_get_screen_size(&width, &height);
 	if (params->x != 0)
-		ft_check_error(1);
+		ft_check_error("Too much resolution...\n");
 	i = ft_get_x(line, params, i, width);
 	i = ft_get_y(line, params, i, height);
 	ft_endofline(line, i);

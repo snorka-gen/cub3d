@@ -9,7 +9,7 @@ t_map	*ft_map_init()
 	t_map *map;
 
 	if (!(map = malloc(sizeof (t_map))))
-		ft_check_error(0);
+		ft_check_error("Malloc Error\n");
 	map->len = 0;
 	map->count = 0;
 	map->player = 0;

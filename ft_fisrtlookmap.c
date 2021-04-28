@@ -16,11 +16,11 @@ static void ft_first_line(int fd, t_map *map)
 	{
 		i = 0;
 		if (!(line = ft_gnl(fd, map)))
-			ft_check_error(7);
+			ft_check_error("Something get wrong with map\n");
 		while (line[i] == ' ' && line[i])
 			i++;
 		if (line[i] != '1' && line[i])
-			ft_check_error(7);
+			ft_check_error("Something get wrong with map\n");
 		if (line[i] == '1')
 		{
 			ft_player_look(map, line);
@@ -40,12 +40,12 @@ void	ft_fisrtlookmap(int fd, t_map *map)
 	while ((line = ft_gnl(fd, map)))
 	{
 		if (line[0] == '\0')
-			ft_check_error(7);
+			ft_check_error("Something get wrong with map\n");
 		ft_maxlen(map, ft_strlen(line));
 		ft_player_look(map, line);
 		map->count++;
 		free(line);
 	}
 	if (map->player != 1)
-		ft_check_error(7);
+		ft_check_error("Is there ONE player?\n");
 }

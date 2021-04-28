@@ -83,27 +83,18 @@ typedef struct	s_data
 	int		endian;
 }				t_data;
 
-
-typedef struct	s_plr //структура для игрока и луча
-{
-	float planeX;
-	float planeY;
-	float dir_x;
-	float dir_y;
-}				  t_plr;
-
 typedef struct s_texture
 {
-	void *img;
-	int width;
-	int height;
-	double wallX;
-	char        *addr;
-	int         bits_per_pixel;
-	int         line_length;
-	int         endian;
-	int		color;
-	int texX;
+	void			*img;
+	int				width;
+	int				height;
+	double			wallX;
+	char			*addr;
+	int				bits_per_pixel;
+	int				line_length;
+	int				endian;
+	unsigned int	color;
+	int				texX;
 
 }				t_texture;
 
@@ -143,15 +134,13 @@ typedef struct s_all
 	t_data		*img;
 	t_map		*map;
 	t_struct	*params;
-	t_plr		*ray;
-	t_plr		*plr;
 	t_texture 	*tex;
 	float		*ZBuffer;
 }				t_all;
 
 
 t_struct		*ft_struct_init();
-void			ft_check_error(int i);
+void			ft_check_error(char *str);
 void			ft_get_params(int fd, t_struct *params);
 void			ft_start_parsing(char *line, t_struct *params, int i);
 void			ft_get_resolution(char *line, t_struct *params, int i);
@@ -174,5 +163,29 @@ void			ft_secondlookmap(int fd, t_map *map);
 void			ft_validmap(t_map *map);
 void			ft_create_window(t_all *all);
 int				key_hook(int key, t_all *all);
-double			radian(double degree);
+void			my_mlx_pixel_put(t_data *data, int x, int y, int color);
+void			texture_test(t_all *all);
+void			get_tex_color(t_all *all, int x, int y, int i);
+void			get_distance_params(t_all *all, t_dist *dist, int i);
+void			get_distance_params2(t_all *all, t_dist *dist);
+void			dda_distance2(t_all *all, t_dist *dist, int i, int x);
+int				what_side(t_all *all, t_dist *dist);
+void			dda_distance(t_all *all, t_dist *dist);
+void			put_the_wall(t_all *all, t_dist *dist, int x, int i);
+void			sprite_sort(t_sprite *sp, int x);
+void			sprite_dis(t_sprite *sp, int x, float posX, float posY);
+void			get_sprite_params(t_all *all, t_drawSprite *ds, int i);
+void			get_sprite_params2(t_all *all, t_drawSprite *ds);
+void			get_sprite_params3(t_all *all, t_drawSprite *ds);
+void			put_sprites(t_all *all);
+void			put_floor(t_all *all);
+void			draw_map(t_all *all);
+void			press_s(t_all *all);
+void			press_w(t_all *all);
+void			press_right(t_all *all);
+void			press_left(t_all *all);
+int				key_hook(int key, t_all *all);
+void			press_a(t_all *all);
+void			press_d(t_all *all);
+
 #endif

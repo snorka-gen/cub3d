@@ -25,6 +25,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/cub.dir/libft/ft_spacealloc.c.o"
   "CMakeFiles/cub.dir/main.c.o"
   "CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
+  "CMakeFiles/cub.dir/raycast_one.c.o"
+  "CMakeFiles/cub.dir/raycast_three.c.o"
+  "CMakeFiles/cub.dir/raycast_two.c.o"
   "cub"
   "cub.pdb"
 )

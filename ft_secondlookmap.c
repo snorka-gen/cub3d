@@ -10,7 +10,7 @@ static void ft_mapline(t_map *map, char *line, int i)
 
 	j = 0;
 	if (!(map->map[i] = ft_spacealloc(map->len + 1, 1)))
-		ft_check_error(0);
+		ft_check_error("Malloc Error\n");
 	while (line[j])
 	{
 		map->map[i][j] = line[j];
@@ -29,14 +29,16 @@ static void	ft_first_line(int fd, t_map *map)
 	{
 		i = 0;
 		if (get_next_line(fd, &line) != 1)
-			ft_check_error(7);
+			ft_check_error("Where is map?\n");
 		while (line[i] == ' ' && line[i])
 			i++;
 		if (line[i] == '1' && line[i])
 			flag = 1;
+		if (flag == 0)
+			free (line);
 	}
 	ft_mapline(map, line, 0);
-	free(line);
+	free (line);
 }
 
 void 		ft_secondlookmap(int fd, t_map *map)
@@ -45,7 +47,7 @@ void 		ft_secondlookmap(int fd, t_map *map)
 	int i;
 
 	if (!(map->map = malloc(sizeof (char *) * map->count)))
-		ft_check_error(0);
+		ft_check_error("Malloc Error\n");
 	i = 1;
 	ft_first_line(fd, map);
 	while (get_next_line(fd, &line))
