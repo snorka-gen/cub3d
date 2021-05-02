@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_struct_init.c                                   :+:      :+:    :+:   */
+/*   mlx_struct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 11:54:03 by fcassey           #+#    #+#             */
-/*   Updated: 2021/05/02 11:54:05 by fcassey          ###   ########.fr       */
+/*   Created: 2021/05/02 11:54:29 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:54:30 by fcassey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub.h"
 
-t_struct	*ft_struct_init(void)
+void	mlx_struct(t_data *img, int x, int y)
 {
-	t_struct *params;
-
-	if (!(params = malloc(sizeof(t_struct))))
+	img->mlx = mlx_init();
+	if (img->mlx == NULL)
 		ft_check_error("Malloc Error\n");
-	params->y = 0;
-	params->x = 0;
-	if (!(params->sky = malloc(sizeof(int) * 3)))
+	img->win = mlx_new_window(img->mlx, x, y, "cub3D");
+	if (img->win == NULL)
 		ft_check_error("Malloc Error\n");
-	params->sky[0] = -1;
-	if (!(params->floor = malloc(sizeof(int) * 3)))
+	img->img = mlx_new_image(img->mlx, x, y);
+	if (img->img == NULL)
 		ft_check_error("Malloc Error\n");
-	params->floor[0] = -1;
-	if (!(params->tex = (char**)malloc(sizeof(char *) * 5)))
+	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel,
+					&img->line_length, &img->endian);
+	if (img->addr == NULL)
 		ft_check_error("Malloc Error\n");
-	params->tex[0] = NULL;
-	params->tex[1] = NULL;
-	params->tex[2] = NULL;
-	params->tex[3] = NULL;
-	params->tex[4] = NULL;
-	return (params);
 }

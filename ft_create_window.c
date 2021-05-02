@@ -1,39 +1,46 @@
-//
-// Created by Аида Сайдашева on 02.03.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_create_window.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:51:45 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:51:46 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub.h"
-
-
 
 void	press_d(t_all *all)
 {
-	double tempX;
-	double tempY;
+	double	x;
+	double	y;
 
-	tempX = all->map->playerx + all->map->dir_y * 2 * MOVESPEED;
-	tempY = all->map->playery - all->map->dir_x * 2 * MOVESPEED;
-	if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
-		if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
-		all->map->playerx += all->map->dir_y * MOVESPEED;
-	if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
-		if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
-		all->map->playery -= all->map->dir_x * MOVESPEED;
+	x = all->map->playerx + all->map->dir_y * 2 * MOVESPEED;
+	y = all->map->playery - all->map->dir_x * 2 * MOVESPEED;
+	if (all->map->map[(int)x][(int)all->map->playery] != '1')
+		if (all->map->map[(int)x][(int)all->map->playery] != '2')
+			all->map->playerx += all->map->dir_y * MOVESPEED;
+	if (all->map->map[(int)all->map->playerx][(int)y] != '1')
+		if (all->map->map[(int)all->map->playerx][(int)y] != '2')
+			all->map->playery -= all->map->dir_x * MOVESPEED;
 	draw_map(all);
 }
 
 void	press_a(t_all *all)
 {
-	double tempX;
-	double tempY;
+	double x;
+	double y;
 
-	tempX = all->map->playerx - all->map->dir_y * 2 * MOVESPEED;
-	tempY = all->map->playery + all->map->dir_x * 2 * MOVESPEED;
-	if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
-		if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
-		all->map->playerx -= all->map->dir_y * MOVESPEED;
-	if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
-		if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
-		all->map->playery += all->map->dir_x * MOVESPEED;
+	x = all->map->playerx - all->map->dir_y * 2 * MOVESPEED;
+	y = all->map->playery + all->map->dir_x * 2 * MOVESPEED;
+	if (all->map->map[(int)x][(int)all->map->playery] != '1')
+		if (all->map->map[(int)x][(int)all->map->playery] != '2')
+			all->map->playerx -= all->map->dir_y * MOVESPEED;
+	if (all->map->map[(int)all->map->playerx][(int)y] != '1')
+		if (all->map->map[(int)all->map->playerx][(int)y] != '2')
+			all->map->playery += all->map->dir_x * MOVESPEED;
 	draw_map(all);
 }
 
@@ -51,22 +58,30 @@ int		key_hook(int key, t_all *all)
 		press_d(all);
 	if (key == 0)
 		press_a(all);
-	if (key == 53) {
+	if (key == 53)
+	{
 		mlx_destroy_window(all->img->mlx, all->img->win);
 		exit(0);
 	}
 	return (0);
 }
 
-void	ft_create_window(t_all *all) {
-	all->img->mlx = mlx_init();
-	all->img->win = mlx_new_window(all->img->mlx, all->params->x, all->params->y, "cub3D");
-	all->img->img = mlx_new_image(all->img->mlx, all->params->x, all->params->y);
-	all->img->addr = mlx_get_data_addr(all->img->img, &all->img->bits_per_pixel, &all->img->line_length,
-									   &all->img->endian);
+int		cub_end(t_all *all)
+{
+	mlx_destroy_window(all->img->mlx, all->img->win);
+	exit(0);
+	return (0);
+}
+
+void	ft_create_window(t_all *all)
+{
+	mlx_struct(all->img, all->params->x, all->params->y);
 	texture_test(all);
 	all->map->dist = (all->params->x / 2) / tan(0.575959);
+	if (all->screen == 1)
+		screenshot(all);
 	draw_map(all);
 	mlx_hook(all->img->win, 2, (1L << 0), &key_hook, all);
+	mlx_hook(all->img->win, 17, 1L << 17, &cub_end, all);
 	mlx_loop(all->img->mlx);
 }

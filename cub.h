@@ -22,11 +22,7 @@ typedef struct s_struct
 	int		flag;
 	int		*floor;
 	int		*sky;
-	char	*no;
-	char	*ea;
-	char	*we;
-	char	*so;
-	char	*s;
+	char 	**tex;
 	int 	up;
 	int 	down;
 }				t_struct;
@@ -50,8 +46,6 @@ typedef struct s_map
 	int sprite;
 	t_sprite *sp;
 	char	**map;
-	int 	side;
-	float	rad;
 	float dist;
 }				t_map;
 
@@ -90,9 +84,9 @@ typedef struct s_texture
 	int				height;
 	double			wallX;
 	char			*addr;
-	int				bits_per_pixel;
+	int				bpp;
 	int				line_length;
-	int				endian;
+	int				end;
 	unsigned int	color;
 	int				texX;
 
@@ -126,7 +120,7 @@ typedef struct s_drawSprite
 	int texY;
 	int texX;
 	int d;
-	int y;
+	int ms;
 }			t_drawSprite;
 
 typedef struct s_all
@@ -136,10 +130,11 @@ typedef struct s_all
 	t_struct	*params;
 	t_texture 	*tex;
 	float		*ZBuffer;
+	int 		screen;
 }				t_all;
 
 
-t_struct		*ft_struct_init();
+t_struct		*ft_struct_init(void);
 void			ft_check_error(char *str);
 void			ft_get_params(int fd, t_struct *params);
 void			ft_start_parsing(char *line, t_struct *params, int i);
@@ -153,7 +148,7 @@ void			ft_get_east(char *line, t_struct *params, int i);
 void			ft_get_sprite(char *line, t_struct *params, int i);
 void			ft_get_floor(char *line, t_struct *params, int i);
 void			ft_get_ceiling(char *line, t_struct *params, int i);
-t_map			*ft_map_init();
+t_map			*ft_map_init(void);
 void			ft_fisrtlookmap(int fd, t_map *map);
 char			*ft_gnl_par(int fd);
 char 			*ft_gnl(int fd, t_map *map);
@@ -169,7 +164,7 @@ void			get_tex_color(t_all *all, int x, int y, int i);
 void			get_distance_params(t_all *all, t_dist *dist, int i);
 void			get_distance_params2(t_all *all, t_dist *dist);
 void			dda_distance2(t_all *all, t_dist *dist, int i, int x);
-int				what_side(t_all *all, t_dist *dist);
+int				what_side(t_dist *dist);
 void			dda_distance(t_all *all, t_dist *dist);
 void			put_the_wall(t_all *all, t_dist *dist, int x, int i);
 void			sprite_sort(t_sprite *sp, int x);
@@ -187,5 +182,8 @@ void			press_left(t_all *all);
 int				key_hook(int key, t_all *all);
 void			press_a(t_all *all);
 void			press_d(t_all *all);
+void			screenshot(t_all *all);
+void			mlx_struct(t_data *img, int x, int y);
+
 
 #endif

@@ -1,12 +1,19 @@
-//
-// Created by Аида Сайдашева on 08.02.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_resolution.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:52:45 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:52:46 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub.h"
 
-static int ft_get_x(char *line, t_struct *params, int i, int width)
+static int	ft_get_x(char *line, t_struct *params, int i, int width)
 {
-
 	while (line[i] == ' ' && line[i])
 		i++;
 	if (ft_strchr("123456789", line[i]))
@@ -22,7 +29,7 @@ static int ft_get_x(char *line, t_struct *params, int i, int width)
 	return (i);
 }
 
-static int ft_get_y(char *line, t_struct *params, int i, int height)
+static int	ft_get_y(char *line, t_struct *params, int i, int height)
 {
 	while (line[i] == ' ' && line[i])
 		i++;
@@ -39,7 +46,7 @@ static int ft_get_y(char *line, t_struct *params, int i, int height)
 	return (i);
 }
 
-void ft_get_resolution(char *line, t_struct *params, int i)
+void		ft_get_resolution(char *line, t_struct *params, int i)
 {
 	int width;
 	int height;

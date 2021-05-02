@@ -1,11 +1,18 @@
-//
-// Created by Аида Сайдашева on 10.02.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_fisrtlookmap.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:52:00 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:52:02 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub.h"
 
-
-static void ft_first_line(int fd, t_map *map)
+static void	ft_first_line(int fd, t_map *map)
 {
 	int		flag;
 	char	*line;
@@ -32,7 +39,7 @@ static void ft_first_line(int fd, t_map *map)
 	}
 }
 
-void	ft_fisrtlookmap(int fd, t_map *map)
+void		ft_fisrtlookmap(int fd, t_map *map)
 {
 	char	*line;
 

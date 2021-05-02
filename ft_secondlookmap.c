@@ -1,10 +1,18 @@
-//
-// Created by Аида Сайдашева on 23.02.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_secondlookmap.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:53:52 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:53:53 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub.h"
 
-static void ft_mapline(t_map *map, char *line, int i)
+static void	ft_mapline(t_map *map, char *line, int i)
 {
 	int j;
 
@@ -35,18 +43,18 @@ static void	ft_first_line(int fd, t_map *map)
 		if (line[i] == '1' && line[i])
 			flag = 1;
 		if (flag == 0)
-			free (line);
+			free(line);
 	}
 	ft_mapline(map, line, 0);
-	free (line);
+	free(line);
 }
 
-void 		ft_secondlookmap(int fd, t_map *map)
+void		ft_secondlookmap(int fd, t_map *map)
 {
-	char *line;
-	int i;
+	char	*line;
+	int		i;
 
-	if (!(map->map = malloc(sizeof (char *) * map->count)))
+	if (!(map->map = malloc(sizeof(char *) * map->count)))
 		ft_check_error("Malloc Error\n");
 	i = 1;
 	ft_first_line(fd, map);

@@ -1,10 +1,18 @@
-//
-// Created by Аида Сайдашева on 09.02.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_floor.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:52:22 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:52:24 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub.h"
 
-static int ft_get_r(char *line, t_struct *params, int i)
+static int	ft_get_r(char *line, t_struct *params, int i)
 {
 	while (line[i] == ' ' && line[i])
 		i++;
@@ -21,7 +29,7 @@ static int ft_get_r(char *line, t_struct *params, int i)
 	return (i);
 }
 
-static int ft_get_g(char *line, t_struct *params, int i)
+static int	ft_get_g(char *line, t_struct *params, int i)
 {
 	while (line[i] == ' ' && line[i])
 		i++;
@@ -42,7 +50,7 @@ static int ft_get_g(char *line, t_struct *params, int i)
 	return (i);
 }
 
-static int ft_get_b(char *line, t_struct *params, int i)
+static int	ft_get_b(char *line, t_struct *params, int i)
 {
 	while (line[i] == ' ' && line[i])
 		i++;
@@ -63,9 +71,8 @@ static int ft_get_b(char *line, t_struct *params, int i)
 	return (i);
 }
 
-void	ft_get_floor(char *line, t_struct *params, int i)
+void		ft_get_floor(char *line, t_struct *params, int i)
 {
-
 	if (params->floor[0] != -1)
 		ft_check_error("Too much color...\n");
 	params->floor[0] = 0;

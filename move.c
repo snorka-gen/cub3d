@@ -1,68 +1,81 @@
-//
-// Created by Florinda Cassey on 4/28/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:54:36 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:54:37 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub.h"
 
 void	press_s(t_all *all)
 {
-	double tempX;
-	double tempY;
+	double x;
+	double y;
 
-	tempX = all->map->playerx - all->map->dir_x * 2 * MOVESPEED;
-	tempY = all->map->playery - all->map->dir_y * 2 * MOVESPEED;
-	if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
-		if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
-			all->map->playerx -= all->map->dir_x *  MOVESPEED;
-	if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
-		if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
-			all->map->playery -= all->map->dir_y  * MOVESPEED;
+	x = all->map->playerx - all->map->dir_x * 2 * MOVESPEED;
+	y = all->map->playery - all->map->dir_y * 2 * MOVESPEED;
+	if (all->map->map[(int)x][(int)all->map->playery] != '1')
+		if (all->map->map[(int)x][(int)all->map->playery] != '2')
+			all->map->playerx -= all->map->dir_x * MOVESPEED;
+	if (all->map->map[(int)all->map->playerx][(int)y] != '1')
+		if (all->map->map[(int)all->map->playerx][(int)y] != '2')
+			all->map->playery -= all->map->dir_y * MOVESPEED;
 	draw_map(all);
 }
 
 void	press_w(t_all *all)
 {
-	double tempX;
-	double tempY;
+	double x;
+	double y;
 
-	tempX = all->map->playerx + all->map->dir_x * 2 * MOVESPEED;
-	tempY = all->map->playery + all->map->dir_y * 2 * MOVESPEED;
-	if (all->map->map[(int)tempX][(int)all->map->playery] != '1')
-		if (all->map->map[(int)tempX][(int)all->map->playery] != '2')
-			all->map->playerx += all->map->dir_x *  MOVESPEED;
-	if (all->map->map[(int)all->map->playerx][(int)tempY] != '1')
-		if (all->map->map[(int)all->map->playerx][(int)tempY] != '2')
-			all->map->playery += all->map->dir_y  * MOVESPEED;
+	x = all->map->playerx + all->map->dir_x * 2 * MOVESPEED;
+	y = all->map->playery + all->map->dir_y * 2 * MOVESPEED;
+	if (all->map->map[(int)x][(int)all->map->playery] != '1')
+		if (all->map->map[(int)x][(int)all->map->playery] != '2')
+			all->map->playerx += all->map->dir_x * MOVESPEED;
+	if (all->map->map[(int)all->map->playerx][(int)y] != '1')
+		if (all->map->map[(int)all->map->playerx][(int)y] != '2')
+			all->map->playery += all->map->dir_y * MOVESPEED;
 	draw_map(all);
 }
 
 void	press_right(t_all *all)
 {
 	double speed;
-	double oldDirX;
-	double oldPlaneX;
+	double x;
+	double px;
 
 	speed = 0.0872665;
-	oldDirX = all->map->dir_x;
-	oldPlaneX = all->map->planeX;
-	all->map->dir_x = all->map->dir_x * cos(-speed) - all->map->dir_y * sin(-speed);
-	all->map->dir_y = oldDirX * sin(-speed) + all->map->dir_y * cos(-speed);
-	all->map->planeX = all->map->planeX * cos(-speed) - all->map->planeY * sin(-speed);
-	all->map->planeY = oldPlaneX * sin(-speed) + all->map->planeY * cos(-speed);
+	x = all->map->dir_x;
+	px = all->map->planeX;
+	all->map->dir_x = all->map->dir_x * cos(-speed) -
+			all->map->dir_y * sin(-speed);
+	all->map->dir_y = x * sin(-speed) + all->map->dir_y * cos(-speed);
+	all->map->planeX = all->map->planeX * cos(-speed) -
+			all->map->planeY * sin(-speed);
+	all->map->planeY = px * sin(-speed) + all->map->planeY * cos(-speed);
 	draw_map(all);
 }
 
 void	press_left(t_all *all)
 {
 	double speed;
-	double oldDirX;
-	double oldPlaneX;
+	double x;
+	double px;
 
 	speed = 0.0872665;
-	oldDirX = all->map->dir_x;
-	oldPlaneX = all->map->planeX;
-	all->map->dir_x = all->map->dir_x * cos(speed) - all->map->dir_y * sin(speed);
-	all->map->dir_y = oldDirX * sin(speed) + all->map->dir_y * cos(speed);
-	all->map->planeX = all->map->planeX * cos(speed) - all->map->planeY * sin(speed);
-	all->map->planeY = oldPlaneX * sin(speed) + all->map->planeY * cos(speed);
+	x = all->map->dir_x;
+	px = all->map->planeX;
+	all->map->dir_x = all->map->dir_x * cos(speed) -
+			all->map->dir_y * sin(speed);
+	all->map->dir_y = x * sin(speed) + all->map->dir_y * cos(speed);
+	all->map->planeX = all->map->planeX * cos(speed) -
+			all->map->planeY * sin(speed);
+	all->map->planeY = px * sin(speed) + all->map->planeY * cos(speed);
 	draw_map(all);
 }

@@ -1,60 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   raycast_four.c                                     :+:      :+:    :+:   */
+/*   screenshot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 11:54:45 by fcassey           #+#    #+#             */
-/*   Updated: 2021/05/02 11:54:46 by fcassey          ###   ########.fr       */
+/*   Created: 2021/05/02 11:55:17 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:55:18 by fcassey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub.h"
 
-void	put_sprites(t_all *all)
+static void	header_to_bmp(int fd, t_all *all, int size)
 {
-	t_drawSprite	ds;
-	int				i;
+	char	header[54];
+	int		i;
 
-	i = 0;
-	sprite_dis(all->map->sp, all->map->sprite, all->map->playerx,
-			all->map->playery);
-	while (i < all->map->sprite)
-	{
-		get_sprite_params(all, &ds, i);
-		get_sprite_params2(all, &ds);
-		get_sprite_params3(all, &ds);
-		i++;
-	}
+	ft_bzero(header, 54);
+	header[0] = 0x42;
+	header[1] = 0x4D;
+	ft_memcpy(&header[2], &size, 4);
+	header[10] = 0x36;
+	header[14] = 0x28;
+	ft_memcpy(&header[18], &all->params->x, 4);
+	i = -all->params->y;
+	ft_memcpy(&header[22], &i, 4);
+	header[26] = 0x01;
+	header[28] = 0x20;
+	write(fd, header, 54);
 }
 
-void	put_floor(t_all *all)
-{
-	int x;
-	int y;
-
-	y = 0;
-	while (y < all->params->y / 2)
-	{
-		x = 0;
-		while (x < all->params->x)
-			my_mlx_pixel_put(all->img, x++, y, all->params->up);
-		y++;
-	}
-	while (y < all->params->y)
-	{
-		x = 0;
-		while (x < all->params->x)
-		{
-			my_mlx_pixel_put(all->img, x, y, all->params->down);
-			x++;
-		}
-		y++;
-	}
-}
-
-void	draw_map(t_all *all)
+static void	draw_screenshot(t_all *all)
 {
 	t_dist	*dist;
 	int		i;
@@ -78,5 +55,18 @@ void	draw_map(t_all *all)
 	}
 	free(dist);
 	put_sprites(all);
-	mlx_put_image_to_window(all->img->mlx, all->img->win, all->img->img, 0, 0);
+}
+
+void		screenshot(t_all *all)
+{
+	int fd;
+	int size;
+
+	fd = open("screenshot.bmp", O_CREAT | O_RDWR, 0666);
+	draw_screenshot(all);
+	size = all->params->x * all->params->y * 4;
+	header_to_bmp(fd, all, size);
+	write(fd, all->img->addr, size);
+	close(fd);
+	exit(0);
 }

@@ -1,24 +1,34 @@
-//
-// Created by Аида Сайдашева on 08.02.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_params.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:52:39 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:52:40 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub.h"
 
-static int		create_trgb(int t, int r, int g, int b)
+static int	create_trgb(int t, int r, int g, int b)
 {
-	return(t << 24 | r << 16 | g << 8 | b);
+	return (t << 24 | r << 16 | g << 8 | b);
 }
 
-static void		create_color(t_struct *params)
+static void	create_color(t_struct *params)
 {
-	params->up = create_trgb(0, params->sky[0], params->sky[1], params->sky[2]);
-	params->down = create_trgb(0, params->floor[0], params->floor[1], params->floor[2]);
+	params->up = create_trgb(0, params->sky[0],
+							params->sky[1], params->sky[2]);
+	params->down = create_trgb(0, params->floor[0],
+							params->floor[1], params->floor[2]);
 }
 
-void ft_get_params(int fd, t_struct *params)
+void		ft_get_params(int fd, t_struct *params)
 {
-	char *line;
-	int i;
+	char	*line;
+	int		i;
 
 	params->flag = 0;
 	while (params->flag != 9)

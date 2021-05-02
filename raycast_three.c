@@ -1,14 +1,22 @@
-//
-// Created by Florinda Cassey on 4/28/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   raycast_three.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:54:59 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:55:01 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub.h"
 
 void	sprite_sort(t_sprite *sp, int x)
 {
-	int		i;
-	int		j;
-	t_sprite temp;
+	int			i;
+	int			j;
+	t_sprite	temp;
 
 	i = 0;
 	while (i < x)
@@ -18,15 +26,9 @@ void	sprite_sort(t_sprite *sp, int x)
 		{
 			if (sp[j - 1].dis < sp[j].dis)
 			{
-				temp.x = sp[j - 1].x;
-				temp.y = sp[j - 1].y;
-				temp.dis = sp[j - 1].dis;
-				sp[j - 1].x = sp[j].x;
-				sp[j - 1].y = sp[j].y;
-				sp[j - 1].dis = sp[j].dis;
-				sp[j].x = temp.x;
-				sp[j].y = temp.y;
-				sp[j].dis = temp.dis;
+				temp = sp[j - 1];
+				sp[j - 1] = sp[j];
+				sp[j] = temp;
 			}
 			j--;
 		}
@@ -55,19 +57,22 @@ void	get_sprite_params(t_all *all, t_drawSprite *ds, int i)
 	ds->transformX = ds->invDet * (all->map->dir_y * ds->spriteX - all->map->dir_x * ds->spriteY);
 	ds->transformY = ds->invDet * (all->map->planeX * ds->spriteY - all->map->planeY * ds->spriteX);
 	ds->spriteScreenX = (int)((all->params->x / 2) * (1 + ds->transformX / ds->transformY));
+	ds->ms = (int)(0 / ds->transformY);
 }
 
 void	get_sprite_params2(t_all *all, t_drawSprite *ds)
 {
-	ds->spriteHeight = abs((int)(all->params->y / ds->transformY));
-	ds->drawStartY = all->params->y / 2 - ds->spriteHeight / 2;
+//	ds->spriteHeight = abs((int)(all->params->y / ds->transformY));
+	ds->spriteHeight = abs((int)((1 / ds->transformY) * all->map->dist));
+	ds->drawStartY = all->params->y / 2 - ds->spriteHeight / 2 + ds->ms;
 	if (ds->drawStartY < 0)
 		ds->drawStartY = 0;
-	ds->drawEndY = ds->spriteHeight / 2 + all->params->y / 2;
+	ds->drawEndY = ds->spriteHeight / 2 + all->params->y / 2 + ds->ms;
 	if (ds->drawEndY >= all->params->y)
 		ds->drawEndY = all->params->y - 1;
 
-	ds->spriteWidth = abs((int)(all->params->y / ds->transformY));
+//	ds->spriteWidth = abs((int)(all->params->y / ds->transformY));
+	ds->spriteWidth = abs((int)((1 / ds->transformY) * all->map->dist));
 	ds->drawStartX = ds->spriteScreenX - ds->spriteWidth / 2;
 	if (ds->drawStartX < 0)
 		ds->drawStartX = 0;
@@ -88,7 +93,7 @@ void	get_sprite_params3(t_all *all, t_drawSprite *ds)
 			y = ds->drawStartY;
 			while (y < ds->drawEndY)
 			{
-				ds->d = y * 256 - all->params->y * 128 + ds->spriteHeight * 128;
+				ds->d = (y - ds->ms) * 256 - all->params->y * 128 + ds->spriteHeight * 128;
 				ds->texY = ((ds->d * all->tex[4].height) / ds->spriteHeight) / 256;
 				get_tex_color(all, ds->texX, ds->texY, 4);
 				if ((all->tex[4].color & 0xFFFFFF) != 0)

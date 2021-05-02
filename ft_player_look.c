@@ -1,6 +1,15 @@
-//
-// Created by Аида Сайдашева on 23.02.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_player_look.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcassey <fcassey@student.21-school>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/02 11:53:44 by fcassey           #+#    #+#             */
+/*   Updated: 2021/05/02 11:53:46 by fcassey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub.h"
 
 static void pov(t_map *map, char c)
@@ -51,8 +60,8 @@ void ft_player_look(t_map *map, char *line)
 		{
 			map->player++;
 			pov(map, line[i]);
-			map->playerx = map->count + 0.2;
-			map->playery = i + 0.2;
+			map->playerx = map->count + 0.5;
+			map->playery = i + 0.5;
 		}
 		i++;
 	}

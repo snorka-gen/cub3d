@@ -67,10 +67,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fcassey/CLionProjects/cub3d2
+CMAKE_SOURCE_DIR = /Users/aidasajdaseva/CLionProjects/cub3d2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles /Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fcassey/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -844,6 +844,87 @@ minilibx_opengl_20191021/mlx_get_screen_size.m.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
 .PHONY : minilibx_opengl_20191021/mlx_get_screen_size.m.s
 
+mlx_init.o: mlx_init.c.o
+
+.PHONY : mlx_init.o
+
+# target to build an object file
+mlx_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_init.c.o
+.PHONY : mlx_init.c.o
+
+mlx_init.i: mlx_init.c.i
+
+.PHONY : mlx_init.i
+
+# target to preprocess a source file
+mlx_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_init.c.i
+.PHONY : mlx_init.c.i
+
+mlx_init.s: mlx_init.c.s
+
+.PHONY : mlx_init.s
+
+# target to generate assembly for a file
+mlx_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_init.c.s
+.PHONY : mlx_init.c.s
+
+move.o: move.c.o
+
+.PHONY : move.o
+
+# target to build an object file
+move.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/move.c.o
+.PHONY : move.c.o
+
+move.i: move.c.i
+
+.PHONY : move.i
+
+# target to preprocess a source file
+move.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/move.c.i
+.PHONY : move.c.i
+
+move.s: move.c.s
+
+.PHONY : move.s
+
+# target to generate assembly for a file
+move.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/move.c.s
+.PHONY : move.c.s
+
+raycast_four.o: raycast_four.c.o
+
+.PHONY : raycast_four.o
+
+# target to build an object file
+raycast_four.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_four.c.o
+.PHONY : raycast_four.c.o
+
+raycast_four.i: raycast_four.c.i
+
+.PHONY : raycast_four.i
+
+# target to preprocess a source file
+raycast_four.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_four.c.i
+.PHONY : raycast_four.c.i
+
+raycast_four.s: raycast_four.c.s
+
+.PHONY : raycast_four.s
+
+# target to generate assembly for a file
+raycast_four.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_four.c.s
+.PHONY : raycast_four.c.s
+
 raycast_one.o: raycast_one.c.o
 
 .PHONY : raycast_one.o
@@ -924,6 +1005,33 @@ raycast_two.s: raycast_two.c.s
 raycast_two.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/raycast_two.c.s
 .PHONY : raycast_two.c.s
+
+screenshot.o: screenshot.c.o
+
+.PHONY : screenshot.o
+
+# target to build an object file
+screenshot.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/screenshot.c.o
+.PHONY : screenshot.c.o
+
+screenshot.i: screenshot.c.i
+
+.PHONY : screenshot.i
+
+# target to preprocess a source file
+screenshot.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/screenshot.c.i
+.PHONY : screenshot.c.i
+
+screenshot.s: screenshot.c.s
+
+.PHONY : screenshot.s
+
+# target to generate assembly for a file
+screenshot.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/screenshot.c.s
+.PHONY : screenshot.c.s
 
 # Help Target
 help:
@@ -1012,6 +1120,15 @@ help:
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.o"
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.i"
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.s"
+	@echo "... mlx_init.o"
+	@echo "... mlx_init.i"
+	@echo "... mlx_init.s"
+	@echo "... move.o"
+	@echo "... move.i"
+	@echo "... move.s"
+	@echo "... raycast_four.o"
+	@echo "... raycast_four.i"
+	@echo "... raycast_four.s"
 	@echo "... raycast_one.o"
 	@echo "... raycast_one.i"
 	@echo "... raycast_one.s"
@@ -1021,6 +1138,9 @@ help:
 	@echo "... raycast_two.o"
 	@echo "... raycast_two.i"
 	@echo "... raycast_two.s"
+	@echo "... screenshot.o"
+	@echo "... screenshot.i"
+	@echo "... screenshot.s"
 .PHONY : help
 
 

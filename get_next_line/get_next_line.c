@@ -27,9 +27,8 @@ int		get_next_line(int fd, char **line)
 	char		*buff;
 	static char	*str;
 
-	if (!line)
-		return (-1);
-	if (!(buff = (char *)malloc(sizeof(char) * (7))))
+	buff = (char *)malloc(sizeof(char) * (7));
+	if (!buff || !line)
 		return (-1);
 	readed = 1;
 	while (readed != 0 && !new_line_is_here(str))
