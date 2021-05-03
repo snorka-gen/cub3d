@@ -48,8 +48,8 @@ static void	draw_screenshot(t_all *all)
 		get_distance_params2(all, dist);
 		dda_distance(all, dist);
 		x = what_side(dist);
-		dda_distance2(all, dist, x, i);
-		all->ZBuffer[i] = dist->perpWallDist;
+		dda_distance2(all, dist, x);
+		all->zbuffer[i] = dist->perpwalldist;
 		put_the_wall(all, dist, i, x);
 		i++;
 	}

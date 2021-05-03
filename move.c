@@ -52,13 +52,13 @@ void	press_right(t_all *all)
 
 	speed = 0.0872665;
 	x = all->map->dir_x;
-	px = all->map->planeX;
+	px = all->map->planex;
 	all->map->dir_x = all->map->dir_x * cos(-speed) -
 			all->map->dir_y * sin(-speed);
 	all->map->dir_y = x * sin(-speed) + all->map->dir_y * cos(-speed);
-	all->map->planeX = all->map->planeX * cos(-speed) -
-			all->map->planeY * sin(-speed);
-	all->map->planeY = px * sin(-speed) + all->map->planeY * cos(-speed);
+	all->map->planex = all->map->planex * cos(-speed) -
+			all->map->planey * sin(-speed);
+	all->map->planey = px * sin(-speed) + all->map->planey * cos(-speed);
 	draw_map(all);
 }
 
@@ -70,12 +70,12 @@ void	press_left(t_all *all)
 
 	speed = 0.0872665;
 	x = all->map->dir_x;
-	px = all->map->planeX;
+	px = all->map->planex;
 	all->map->dir_x = all->map->dir_x * cos(speed) -
 			all->map->dir_y * sin(speed);
 	all->map->dir_y = x * sin(speed) + all->map->dir_y * cos(speed);
-	all->map->planeX = all->map->planeX * cos(speed) -
-			all->map->planeY * sin(speed);
-	all->map->planeY = px * sin(speed) + all->map->planeY * cos(speed);
+	all->map->planex = all->map->planex * cos(speed) -
+			all->map->planey * sin(speed);
+	all->map->planey = px * sin(speed) + all->map->planey * cos(speed);
 	draw_map(all);
 }

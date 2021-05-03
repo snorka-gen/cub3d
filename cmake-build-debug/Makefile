@@ -844,32 +844,32 @@ minilibx_opengl_20191021/mlx_get_screen_size.m.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.s
 .PHONY : minilibx_opengl_20191021/mlx_get_screen_size.m.s
 
-mlx_init.o: mlx_init.c.o
+mlx_struct.o: mlx_struct.c.o
 
-.PHONY : mlx_init.o
+.PHONY : mlx_struct.o
 
 # target to build an object file
-mlx_init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_init.c.o
-.PHONY : mlx_init.c.o
+mlx_struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_struct.c.o
+.PHONY : mlx_struct.c.o
 
-mlx_init.i: mlx_init.c.i
+mlx_struct.i: mlx_struct.c.i
 
-.PHONY : mlx_init.i
+.PHONY : mlx_struct.i
 
 # target to preprocess a source file
-mlx_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_init.c.i
-.PHONY : mlx_init.c.i
+mlx_struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_struct.c.i
+.PHONY : mlx_struct.c.i
 
-mlx_init.s: mlx_init.c.s
+mlx_struct.s: mlx_struct.c.s
 
-.PHONY : mlx_init.s
+.PHONY : mlx_struct.s
 
 # target to generate assembly for a file
-mlx_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_init.c.s
-.PHONY : mlx_init.c.s
+mlx_struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/mlx_struct.c.s
+.PHONY : mlx_struct.c.s
 
 move.o: move.c.o
 
@@ -1033,6 +1033,33 @@ screenshot.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/screenshot.c.s
 .PHONY : screenshot.c.s
 
+some_sprite_things.o: some_sprite_things.c.o
+
+.PHONY : some_sprite_things.o
+
+# target to build an object file
+some_sprite_things.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/some_sprite_things.c.o
+.PHONY : some_sprite_things.c.o
+
+some_sprite_things.i: some_sprite_things.c.i
+
+.PHONY : some_sprite_things.i
+
+# target to preprocess a source file
+some_sprite_things.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/some_sprite_things.c.i
+.PHONY : some_sprite_things.c.i
+
+some_sprite_things.s: some_sprite_things.c.s
+
+.PHONY : some_sprite_things.s
+
+# target to generate assembly for a file
+some_sprite_things.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/some_sprite_things.c.s
+.PHONY : some_sprite_things.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1120,9 +1147,9 @@ help:
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.o"
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.i"
 	@echo "... minilibx_opengl_20191021/mlx_get_screen_size.s"
-	@echo "... mlx_init.o"
-	@echo "... mlx_init.i"
-	@echo "... mlx_init.s"
+	@echo "... mlx_struct.o"
+	@echo "... mlx_struct.i"
+	@echo "... mlx_struct.s"
 	@echo "... move.o"
 	@echo "... move.i"
 	@echo "... move.s"
@@ -1141,6 +1168,9 @@ help:
 	@echo "... screenshot.o"
 	@echo "... screenshot.i"
 	@echo "... screenshot.s"
+	@echo "... some_sprite_things.o"
+	@echo "... some_sprite_things.i"
+	@echo "... some_sprite_things.s"
 .PHONY : help
 
 

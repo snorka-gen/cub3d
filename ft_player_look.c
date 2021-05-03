@@ -12,51 +12,58 @@
 
 #include "cub.h"
 
-static void pov(t_map *map, char c)
+static void	pov2(t_map *map, char c)
 {
-	if (c == 'N')
-	{
-		map->planeX = 0;
-		map->planeY = 0.66;
-		map->dir_x = -1;
-		map->dir_y = 0;
-	}
-	if (c == 'S')
-	{
-		map->planeX = 0;
-		map->planeY = -0.66;
-		map->dir_x = 1;
-		map->dir_y = 0;
-	}
 	if (c == 'E')
 	{
-		map->planeX = 0.66;
-		map->planeY = 0;
+		map->planex = 0.66;
+		map->planey = 0;
 		map->dir_x = 0;
 		map->dir_y = 1;
 	}
 	if (c == 'W')
 	{
-		map->planeX = -0.66;
-		map->planeY = 0;
+		map->planex = -0.66;
+		map->planey = 0;
 		map->dir_x = 0;
 		map->dir_y = -1;
 	}
 }
 
-void ft_player_look(t_map *map, char *line)
+static void	pov(t_map *map, char c)
+{
+	if (c == 'N')
+	{
+		map->planex = 0;
+		map->planey = 0.66;
+		map->dir_x = -1;
+		map->dir_y = 0;
+	}
+	if (c == 'S')
+	{
+		map->planex = 0;
+		map->planey = -0.66;
+		map->dir_x = 1;
+		map->dir_y = 0;
+	}
+	pov2(map, c);
+}
+
+void		ft_player_look(t_map *map, char *line)
 {
 	int i;
 
 	i = 0;
 	if (!line)
 		return ;
-	while (line[i]) {
+	while (line[i])
+	{
 		if (!(ft_strchr("012NSEW ", line[i])))
 			ft_check_error("Wrong object on map!\n");
 		if (line[i] == '2')
 			map->sprite++;
-		if (line[i] == 'N' || line[i] == 'S' || line[i] == 'W' || line[i] == 'E')
+		if (line[i] == 'N' || line[i] == 'S' ||
+				line[i] == 'W' || line[i] == 'E')
 		{
 			map->player++;
 			pov(map, line[i]);

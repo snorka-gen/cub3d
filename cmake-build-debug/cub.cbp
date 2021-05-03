@@ -157,7 +157,7 @@
 		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/minilibx_opengl_20191021/mlx_get_screen_size.m">
 			<Option target="cub"/>
 		</Unit>
-		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/mlx_init.c">
+		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/mlx_struct.c">
 			<Option target="cub"/>
 		</Unit>
 		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/move.c">
@@ -176,6 +176,9 @@
 			<Option target="cub"/>
 		</Unit>
 		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/screenshot.c">
+			<Option target="cub"/>
+		</Unit>
+		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/some_sprite_things.c">
 			<Option target="cub"/>
 		</Unit>
 		<Unit filename="/Users/aidasajdaseva/CLionProjects/cub3d2/CMakeLists.txt">

@@ -46,8 +46,6 @@ void		ft_fisrtlookmap(int fd, t_map *map)
 	ft_first_line(fd, map);
 	while ((line = ft_gnl(fd, map)))
 	{
-		if (line[0] == '\0')
-			ft_check_error("Something get wrong with map\n");
 		ft_maxlen(map, ft_strlen(line));
 		ft_player_look(map, line);
 		map->count++;

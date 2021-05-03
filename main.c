@@ -37,8 +37,8 @@ static void	matreshka(t_all *all, int i)
 	}
 	if (i == 1)
 	{
-		all->ZBuffer = malloc(sizeof(double) * all->params->x + 1);
-		if (all->ZBuffer == NULL)
+		all->zbuffer = malloc(sizeof(double) * all->params->x + 1);
+		if (all->zbuffer == NULL)
 			ft_check_error("Malloc Error\n");
 	}
 }

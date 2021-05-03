@@ -48,21 +48,21 @@ void	get_tex_color(t_all *all, int x, int y, int i)
 
 void	get_distance_params(t_all *all, t_dist *dist, int i)
 {
-	dist->cameraX = 2 * i / (double)all->params->x - 1;
-	dist->rayDirX = all->map->dir_x + all->map->planeX * dist->cameraX;
-	dist->rayDirY = all->map->dir_y + all->map->planeY * dist->cameraX;
-	if (dist->rayDirY == 0)
-		dist->deltaDistX = 0;
-	else if (dist->rayDirX == 0)
-		dist->deltaDistX = 1;
+	dist->camerax = 2 * i / (double)all->params->x - 1;
+	dist->raydirx = all->map->dir_x + all->map->planex * dist->camerax;
+	dist->raydiry = all->map->dir_y + all->map->planey * dist->camerax;
+	if (dist->raydiry == 0)
+		dist->deltadistx = 0;
+	else if (dist->raydirx == 0)
+		dist->deltadistx = 1;
 	else
-		dist->deltaDistX = fabs(1 / dist->rayDirX);
-	if (dist->rayDirX == 0)
-		dist->deltaDistY = 0;
-	else if (dist->rayDirY == 0)
-		dist->deltaDistY = 1;
+		dist->deltadistx = fabs(1 / dist->raydirx);
+	if (dist->raydirx == 0)
+		dist->deltadisty = 0;
+	else if (dist->raydiry == 0)
+		dist->deltadisty = 1;
 	else
-		dist->deltaDistY = fabs(1 / dist->rayDirY);
-	dist->mapX = (int)all->map->playerx;
-	dist->mapY = (int)all->map->playery;
+		dist->deltadisty = fabs(1 / dist->raydiry);
+	dist->mapx = (int)all->map->playerx;
+	dist->mapy = (int)all->map->playery;
 }

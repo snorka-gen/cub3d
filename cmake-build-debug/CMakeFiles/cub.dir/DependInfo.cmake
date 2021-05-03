@@ -30,13 +30,14 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/aidasajdaseva/CLionProjects/cub3d2/libft/ft_spacealloc.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/libft/ft_spacealloc.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/main.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/main.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/minilibx_opengl_20191021/mlx_get_screen_size.m" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/minilibx_opengl_20191021/mlx_get_screen_size.m.o"
-  "/Users/aidasajdaseva/CLionProjects/cub3d2/mlx_init.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/mlx_init.c.o"
+  "/Users/aidasajdaseva/CLionProjects/cub3d2/mlx_struct.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/mlx_struct.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/move.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/move.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/raycast_four.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/raycast_four.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/raycast_one.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/raycast_one.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/raycast_three.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/raycast_three.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/raycast_two.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/raycast_two.c.o"
   "/Users/aidasajdaseva/CLionProjects/cub3d2/screenshot.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/screenshot.c.o"
+  "/Users/aidasajdaseva/CLionProjects/cub3d2/some_sprite_things.c" "/Users/aidasajdaseva/CLionProjects/cub3d2/cmake-build-debug/CMakeFiles/cub.dir/some_sprite_things.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

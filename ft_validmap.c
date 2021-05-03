@@ -42,7 +42,10 @@ static void	ft_check_perimetr(t_map *map)
 	while (i < map->count)
 	{
 		if (map->map[i][0] != ' ' && map->map[i][0] != '1')
-			ft_check_error("Not enough walls\n");
+		{
+			printf("|%s| i = %d\n", map->map[i], i);
+			ft_check_error("Not enough walls?\n");
+		}
 		i++;
 	}
 	i = 0;

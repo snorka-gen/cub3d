@@ -24,6 +24,8 @@ static void	ft_mapline(t_map *map, char *line, int i)
 		map->map[i][j] = line[j];
 		j++;
 	}
+	if (line[0] == '\0')
+		map->map[i][0] = ' ';
 }
 
 static void	ft_first_line(int fd, t_map *map)

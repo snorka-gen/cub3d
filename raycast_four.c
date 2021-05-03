@@ -14,7 +14,7 @@
 
 void	put_sprites(t_all *all)
 {
-	t_drawSprite	ds;
+	t_drawsprite	ds;
 	int				i;
 
 	i = 0;
@@ -71,8 +71,8 @@ void	draw_map(t_all *all)
 		get_distance_params2(all, dist);
 		dda_distance(all, dist);
 		x = what_side(dist);
-		dda_distance2(all, dist, x, i);
-		all->ZBuffer[i] = dist->perpWallDist;
+		dda_distance2(all, dist, x);
+		all->zbuffer[i] = dist->perpwalldist;
 		put_the_wall(all, dist, i, x);
 		i++;
 	}
